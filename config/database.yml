@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: real_estate
+  port: 5432
+  username: postgres
+  password: root
+  host: localhost

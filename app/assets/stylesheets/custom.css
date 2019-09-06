@@ -1,0 +1,614 @@
+/*Font Family Used In Website*/
+/*Roboto (Integrated From Google Fonts Library)*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+body {
+    font-family: Roboto;
+}
+
+section , header , footer {
+    float: left;
+    width: 100%;
+}
+img {
+	max-width: 100%;
+}
+
+a {
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.footer-links .container {
+    border-top: 1px solid silver;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid silver;
+    text-align: center;
+}
+.footer-links a {
+    color: black;
+    font-weight: 500;
+    margin: 0px 10px;
+}
+.zfoot-logo-full, .znav-logo-full, .znav-logo-mobile {
+    color: #006aff;
+}
+
+
+section.footer-text {
+    padding: 50px 0px 20px 0px;
+    text-align: center;
+}
+
+
+.footer-text p {
+    color: #2f2f2f;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    line-height: 20px;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.footer-text h5 svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.footer-text h5 {
+    color: grey;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+}
+.footer-text h5 span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer-text span a {
+    background: #006aff;
+    color: white;
+    font-size: 15px;
+    width: 30px;
+    display: inline-block;
+    height: 30px;
+    border-radius: 100%;
+    vertical-align: middle;
+    padding-top: 8px;
+    margin-right: 5px;
+}
+.footer-text img {
+    width: 50px;
+}
+
+section.homes {
+    background: #f9f9fb;
+    padding: 60px 0px 80px 0px;
+}
+
+.homes-head {
+    float: left;
+    width: 100%;
+    margin-bottom: 45px;
+    text-align: center;
+}
+.homes-head h5 {
+    color: black;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+}
+.homes-head h6 {
+    background: #ffd237;
+    display: block;
+    width: 150px;
+    height: 1px;
+    margin: auto;
+    margin-top: 30px;
+}
+.home-box {
+    float: left;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 0px 3px silver;
+    text-align: center;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+.home-box:hover {
+transform:scale(1.05);
+-webkit-transform:scale(1.05);
+box-shadow: 0px 0px 15px silver;
+margin-top: -10px;
+}
+
+.home-box:hover a {
+    background:#006aff;
+    border:1px solid #006aff;
+    color:white;
+}
+.home-box img {
+    height: 160px;
+    margin-bottom: 12px;
+}
+
+.home-box h5 {
+    color: black;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 22px;
+}
+
+.home-box p {
+    color: black;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    min-height: 80px;
+}
+
+.home-box a {
+    display: inline-block;
+    border: 1px solid silver;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 9px 26px;
+    letter-spacing: 0.6px;
+    color: #006aff;
+}
+
+header {
+    padding: 23px 0px;
+    text-align: center;
+}
+.navbar-custom {
+    float: left;
+    width: 100%;
+}
+.menu-item {
+    display: inline-block;
+    margin: 0px 15px;
+    vertical-align: middle;
+}
+.menu-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 50px;
+}
+.menu-item a {
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.banner {
+    background-image: url("logo.jpeg");
+    background-size: cover;
+    background-position: top center;
+
+}
+.banner-text {
+    float: left;
+    width: 100%;
+    margin-bottom: 400px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.banner-text h5 {
+    color: white;
+    font-size: 60px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.banner-text p {
+    color: white;
+    font-weight: 300;
+    font-size: 21px;
+    letter-spacing: 0.8px;
+    margin-bottom: 25px;
+}
+
+.banner-text form {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #000000;
+    margin: auto;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.banner-text input[type="text"] {
+    width: 95%;
+    border: none;
+    vertical-align: top;
+    height: 55px;
+    font-weight: 500;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    padding:0px 15px;
+}
+.banner-text input[type="submit"] {
+    background-image: url("search-icon.jpg");
+    width: 40px;
+    position: absolute;
+    top: 0px;
+    border: none;
+    height: 55px;
+    width: 50px;
+    right: 0px;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #006afe;
+}
+
+section.info-listings {
+    padding: 60px 0px 40px 0px;
+}
+
+
+
+.info-box {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+
+.info-box h5 {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    border: 1px solid silver;
+    margin: 0px;
+    padding: 15px 0px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.info-box p {
+    margin-bottom: 7px;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    display:none;
+}
+
+h5.blue-bg {
+    background: #006aff;
+    color: white;
+}
+.menu-hamburger {
+display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*Media Queries Of Website*/
+
+/*Small Laptops*/
+@media screen and (max-width:992px) and (min-width:768px) { 
+.homes-data .col-md-4.col-lg-4.col-sm-4.col-xs-12 {
+    width: 45%;
+    margin: auto;
+    float: none;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.homes-data  {
+    text-align: center;
+}
+.banner-text {
+    float: left;
+    width: 100%;
+    margin-bottom: 218px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.navbar-custom {
+    float: left;
+    width: 100%;
+    padding-top: 40px;
+}
+
+.menu-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 30px;
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
+
+.menu-hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #006aff;
+    padding: 3px;
+}
+.menu-hamburger img {
+    width: 30px;
+}
+.menu-item {
+    display: inline-block;
+    margin: 0px;
+    vertical-align: middle;
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    display: none;
+}
+}
+
+
+/*Tablet Devices*/
+@media screen and (max-width:767px) and (min-width:520px) { 
+header {
+    padding: 15px 0px;
+    text-align: center;
+}
+
+
+.navbar-custom {
+    float: left;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.menu-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 30px;
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
+
+.menu-hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #006aff;
+    padding: 3px;
+}
+.menu-hamburger img {
+    width: 30px;
+}
+.menu-item {
+    display: inline-block;
+    margin: 0px;
+    vertical-align: middle;
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    display: none;
+}
+.banner-text {
+    float: left;
+    width: 100%;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.banner-text h5 {
+    color: white;
+    font-size: 45px;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.banner-text input[type="text"] {
+    width: 95%;
+    border: none;
+    vertical-align: top;
+    height: 55px;
+    font-weight: 500;
+    color: black;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    padding: 0px 15px;
+}
+.homes-head h5 {
+    color: black;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+}
+.home-box {
+    float: none;
+    width: 450px;
+    background: white;
+    box-shadow: 0px 0px 3px silver;
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    margin-bottom: 35px;
+}
+.home-box:hover {
+    margin-top: 0px;
+}
+.info-listings .col-md-3.col-lg-3.col-sm-6.col-xs-6 {
+    width: 100%;
+}
+.footer-text h5 svg {
+    display: block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.banner-text form {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid #000000;
+    margin: auto;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: left;
+}
+.homes-head h5 br {
+    display: none;
+}
+
+
+}
+
+
+
+
+/*Mobile Devices*/
+@media screen and (max-width:519px) and (min-width:320px) { 
+
+header {
+    padding: 15px 0px;
+    text-align: center;
+}
+
+
+.navbar-custom {
+    float: left;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.menu-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 30px;
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
+
+.menu-hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #006aff;
+    padding: 3px;
+}
+.menu-hamburger img {
+    width: 30px;
+}
+.menu-item {
+    display: inline-block;
+    margin: 0px;
+    vertical-align: middle;
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    display: none;
+}
+.banner-text {
+    float: left;
+    width: 100%;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.banner-text h5 {
+    color: white;
+    font-size: 35px;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.banner-text input[type="text"] {
+    width: 95%;
+    border: none;
+    vertical-align: top;
+    height: 55px;
+    font-weight: 500;
+    color: black;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    padding: 0px 15px;
+}
+.homes-head h5 {
+    color: black;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+}
+.home-box {
+    float: left;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 0px 3px silver;
+    text-align: center;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    margin-bottom: 35px;
+}
+.info-listings .col-md-3.col-lg-3.col-sm-6.col-xs-6 {
+    width: 100%;
+}
+.footer-text h5 svg {
+    display: block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.home-box:hover {
+    margin-top: 0px;
+}
+}
