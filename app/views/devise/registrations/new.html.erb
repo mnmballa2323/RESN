@@ -1,0 +1,44 @@
+<div class="row" style="padding:140px 0;">
+  <div id="user-account-form" style="padding-bottom: 40px; ">
+    <div class="rounded-content-frame__header">
+      Have an account?
+      <%= link_to("Log in",session_path(resource_name),:class=>"bold js-switch-to-login") %>
+    </div>
+    <div class="rounded-content-frame__content current" id="signup">
+      <h2 class="title">
+        Sign up
+      </h2>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "form-simple" }) do |f| %>
+      <fieldset>
+        <ol>
+          <li><%= devise_error_messages! %></li>
+
+          <li class="mb3">
+            <%= f.label :email,:class=>"offscreen" %>
+            <%= f.email_field :email,:placeholder=>"Email",:required=>true %>
+          </li>
+
+          <li class="mb3">
+            <%= f.label :password,:class=>"offscreen" %>
+            <%= f.password_field :password, autocomplete: "off",:placeholder=>"Password",:required=>true %>
+          </li>
+
+          <li class="mb3">
+            <%= f.label :password_confirmation,:class=>"offscreen"  %>
+            <%= f.password_field :password_confirmation, autocomplete: "off",:placeholder=>"Password Confirmation",:required=>true %>
+          </li>
+
+          <li class="m0">
+            <br>
+            <%= f.submit "Sign up!",:class=>"btn btn--green btn--block submit" %>
+          <li>
+        </ol>
+      </fieldset>
+    <% end %>
+    
+  </div>
+</div>
+
+
