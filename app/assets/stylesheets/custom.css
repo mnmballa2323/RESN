@@ -73,7 +73,6 @@ section.footer-text {
 }
 
 .footer-text span a {
-    background: #006aff;
     color: white;
     font-size: 15px;
     width: 30px;
@@ -81,7 +80,6 @@ section.footer-text {
     height: 30px;
     border-radius: 100%;
     vertical-align: middle;
-    padding-top: 8px;
     margin-right: 5px;
 }
 .footer-text img {
@@ -195,7 +193,7 @@ header {
 }
 
 .banner {
-    background-image: url("logo.jpeg");
+    background-image: url("walp.jpg");
     background-size: 100% 100%;
     background-position: top center;
 
@@ -203,7 +201,7 @@ header {
 .banner-text {
     float: left;
     width: 100%;
-    margin-bottom: 400px;
+    margin-bottom: 300px;
     margin-top: 100px;
     text-align: center;
 }
