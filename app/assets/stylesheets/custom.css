@@ -6,6 +6,17 @@ body {
     font-family: Roboto;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 80px;
+}
+  
+
 section , header , .home footer {
     float: left;
     width: 100%;
@@ -178,6 +189,8 @@ header {
     text-align: center;
 }
 .navbar-custom {
+    background: #FFF;
+    z-index: 9999;
     float: left;
     width: 100%;
 }

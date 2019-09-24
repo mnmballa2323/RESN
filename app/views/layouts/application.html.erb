@@ -14,7 +14,9 @@
     <header>
       <%= render 'header' %>
     </header>
-    <%= yield %>
-    <%= render 'theme_footer'%>
+    <div class="content">
+      <%= yield %>
+      <%= render 'theme_footer'%>
+    </div>
   </body>
 </html>

@@ -1,4 +1,4 @@
- <div class="navbar-custom">
+<div class="navbar-custom sticky">
   <div class="menu-hamburger">
     <%= image_tag "hamburger.png" %>
   </div>
@@ -26,10 +26,10 @@
     <%= link_to 'Agents', agents_path %>
   </div>
   <div class="menu-item">
-    <a href=""> Contractors</a>
+    <%=link_to "Services", packages_path %>
   </div>
   <div class="menu-item">
-    <%= link_to 'List Rental', list_rental_path %>
+    <%= link_to 'List Rental', submit_property_path %>
   </div>
   <% if user_signed_in? %>
     <div class="menu-item">
