@@ -1,0 +1,68 @@
+<header class="header header--blue">
+  <div class="container">
+    <div class="header__main">
+      <div class="header__logo">
+        <a href="index.html">
+          <h1 class="screen-reader-text">Realand</h1>
+          <%= link_to root_path do %>
+           <%= image_tag 'uploads/logo.png', alt: 'Realand'%>
+          <% end %>	
+        </a>
+      </div><!-- .header__logo -->
+
+      <div class="nav-mobile">
+        <a href="#" class="nav-toggle">
+          <span></span>
+        </a><!-- .nav-toggle -->
+      </div><!-- .nav-mobile -->
+
+      <div class="header__menu header__menu--v6">
+        <ul class="header__nav">
+          <li class="header__nav-item">
+            <%= link_to 'Home', root_path, class: 'header__nav-link header__nav-link--v2' %>
+          </li>
+          <li class="header__nav-item">
+            <%= link_to 'List Rental', list_rental_path, class: 'header__nav-link header__nav-link--v2' %>
+          </li>
+          <li class="header__nav-item">
+            <%= link_to 'Property', property_path, class: 'header__nav-link header__nav-link--v2' %>
+          </li>
+          <li class="header__nav-item">
+              <a href="#" class="header__nav-link header__nav-link--v2">Pages</a>
+              <ul>
+                <li>
+                  <a href="#">My Account</a>
+                  <ul>
+                    <li><%= link_to "My Profile", my_profile_path %></li>
+                    <li><a href="my_property.html">My Property</a></li>
+                    <li><a href="bookmarked_listing.html">Bookmarked Listing</a></li>
+                    <li><a href="change_password.html">Change Password</a></li>
+                  </ul>
+                </li>
+                <li><%= link_to "About us", about_path %></li>
+                <li><%= link_to "Contact", contact_path %></li>
+                <li><%= link_to "Agent List", agents_path %></li>
+                <li><%= link_to "Agent Single", single_agent_path %></li>
+                <li><a href="coming_soon.html">Coming Soon</a></li>
+                <li><a href="404.html">404 Page</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li><a href="sign_up.html">Login/Signup</a></li>
+              </ul>
+          </li>
+          <li class="header__nav-item">
+            <%= link_to 'Blog', blog_path, class: 'header__nav-link header__nav-link--v2' %>
+          </li>
+        </ul><!-- .header__nav -->
+
+        <ul class="topbar__user topbar__user--uppercase">
+          <li><%= link_to "Sign In",  new_user_session_path, class: 'topbar__link topbar__link--white'%></li>
+					<li><%= link_to "Join", new_user_registration_path, class: 'topbar__link topbar__link--white'%></li>
+        </ul>
+
+      </div><!-- .header__menu -->
+			<%= link_to submit_property_path, class: 'header__cta header__cta--outline' do  %>
+				<span>&plus; Submit Property</span>
+			<% end %>
+    </div><!-- .header__main -->
+  </div><!-- .container -->
+</header><!-- .header -->
