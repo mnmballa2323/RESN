@@ -1,0 +1,57 @@
+<section class="contact">
+  <div class="container">
+    <ul class="ht-breadcrumbs ht-breadcrumbs--y-padding ht-breadcrumbs--b-border">
+      <li class="ht-breadcrumbs__item"><a href="#" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Home</span></a></li>
+      <li class="ht-breadcrumbs__item"><a href="#" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Pages</span></a></li>
+      <li class="ht-breadcrumbs__item"><span class="ht-breadcrumbs__page">Contact Us</span></li>
+    </ul><!-- ht-breadcrumb -->
+
+    <div class="contact__main">
+      <div class="contact__map-container">
+        <div id="contact-map"></div><!-- .contact__map -->
+      </div><!-- .contact__map-container -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="contact__title">Contact Us</h2>
+          <div class="contact__desc">
+            <p>You can contact us by a call, a message or visit us</p>
+            <p>From <strong>Monday</strong> to <strong>Friday, 8:00 am - 6:00 pm</strong></p>
+          </div>
+          <ul class="agency__contact">
+            <li class="agency__contact-phone"><a href="tel:+3104326507">(310) 432-6507</a></li>
+            <li class="agency__contact-website"><a href="#">www.ReaLand.com</a></li>
+            <li class="agency__contact-email"><a href="mailto:CitiState@domain.com">ReaLand@domain.com</a></li>
+            <li class="agency__contact-address">200 East 65th Street 17NO, New York, NY 10065</li>
+          </ul>
+        </div><!-- .col -->
+        <div class="col-md-6">
+          <h2 class="contact__title">Send Us a Message</h2>
+          <div class="contact__desc">
+            <p>Send us your question or feedbacks about our services or your plan, our consultant will solve the trouble. We look forward to serving your ideas!</p>
+          </div>
+           <form class="contact-form contact-form--no-padding">
+              <div class="contact-form__body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" class="contact-form__field contact-form__field--contact" placeholder="Name" name="name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" class="contact-form__field contact-form__field--contact" placeholder="Email" name="email" required>
+                  </div>
+                </div>
+                <input type="tel" class="contact-form__field contact-form__field--contact" placeholder="Phone number" name="phone number">
+                <textarea class="contact-form__field contact-form__comment contact-form__field--contact" cols="30" rows="4" placeholder="Comment" name="comment" required></textarea>
+                
+              </div><!-- .contact-form__body -->
+              <div class="contact-form__footer">
+                <input type="submit" class="contact-form__submit contact-form__submit--contact" name="submit" value="Send Message">
+              </div><!-- .contact-form__footer -->
+            </form><!-- .contact-form -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .contact__main -->
+  </div>
+</section><!-- .contact -->
+
+<%= render 'partial/news_letter' %>

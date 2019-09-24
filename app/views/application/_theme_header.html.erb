@@ -34,8 +34,8 @@
                   <a href="#">My Account</a>
                   <ul>
                     <li><%= link_to "My Profile", my_profile_path %></li>
-                    <li><a href="my_property.html">My Property</a></li>
-                    <li><a href="bookmarked_listing.html">Bookmarked Listing</a></li>
+                    <li><%= link_to "My Property", my_property_path %></li>
+                    <li><%= link_to "Bookmarked Listing", book_marked_listing_path %></li>
                     <li><a href="change_password.html">Change Password</a></li>
                   </ul>
                 </li>
@@ -43,10 +43,10 @@
                 <li><%= link_to "Contact", contact_path %></li>
                 <li><%= link_to "Agent List", agents_path %></li>
                 <li><%= link_to "Agent Single", single_agent_path %></li>
-                <li><a href="coming_soon.html">Coming Soon</a></li>
+                <li><%= link_to "Coming Soon", coming_soon_path %></li>
                 <li><a href="404.html">404 Page</a></li>
-                <li><a href="package.html">Packages</a></li>
-                <li><a href="sign_up.html">Login/Signup</a></li>
+                <li><%= link_to "Packages", packages_path %></li>
+                <li><%= link_to "Login/Signup", new_user_registration_path, class: 'topbar__link topbar__link--white'%></li>
               </ul>
           </li>
           <li class="header__nav-item">

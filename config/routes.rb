@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   get 'contact' => 'pages#contact'
   get 'packages' => 'pages#packages'
   get 'my_property' => 'pages#my_property'
-
+  get 'coming_soon' => 'pages#coming_soon'
+  get 'book_marked_listing' => 'pages#book_marked_listing'
 end
