@@ -6,10 +6,16 @@ body {
     font-family: Roboto;
 }
 
-section , header , footer {
+section , header , .home footer {
     float: left;
     width: 100%;
 }
+
+.theme-footer {
+    float: left;
+    width: 100%;
+}
+
 img {
 	max-width: 100%;
 }

@@ -5578,6 +5578,7 @@ div.similar-home:last-of-type {
 .package__features {
   border-top: 1px dashed #bbbbbb;
   border-bottom: 1px dashed #bbbbbb;
+  clear: both;
 }
 .package__feature {
   display: flex;
