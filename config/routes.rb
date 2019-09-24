@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   get 'my_property' => 'pages#my_property'
   get 'coming_soon' => 'pages#coming_soon'
   get 'book_marked_listing' => 'pages#book_marked_listing'
+  get 'buy' => 'pages#buy'
+  get 'sell' => 'pages#sell'
+  get 'rent' => 'pages#rent'
 end
