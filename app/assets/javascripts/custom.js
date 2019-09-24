@@ -1542,7 +1542,7 @@ if ($("#submit-property-map").length > 0) {
   $('html').addClass('hidescrollbar');    
 
   window.addEventListener('load', function() { // when page loads
-      console.log("ASDSADASDASDADADADADADADad")
+      
       elapsedTime = new Date() - startTime; // get time elapsed once page has loaded
       var hidePageTime = (elapsedTime > minTime)? 0 : minTime - elapsedTime;
         
