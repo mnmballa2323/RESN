@@ -1,0 +1,49 @@
+ <div class="navbar-custom">
+  <div class="menu-hamburger">
+    <%= image_tag "hamburger.png" %>
+  </div>
+  <div class="menu-item">
+    <%= link_to 'Buy', blog_path %>
+  </div>
+  <div class="menu-item">
+    <%= link_to 'Rent', blog_path %>
+  </div>
+  <div class="menu-item">
+    <%= link_to 'Sell', blog_path %>
+  </div>
+  <div class="menu-item">
+    <a href=""> Mortgage </a>
+  </div>
+  <div class="menu-item">
+    <a href=""> Insurance</a>
+  </div>
+  <div class="menu-logo">
+    <%= link_to root_path do %>
+      <%= image_tag "usaresidentiallogo.png",:style=>"max-height: 60px;margin-left:50px;" %>
+    <% end %>
+  </div>
+  <div class="menu-item">
+    <%= link_to 'Agents', agents_path %>
+  </div>
+  <div class="menu-item">
+    <a href=""> Contractors</a>
+  </div>
+  <div class="menu-item">
+    <%= link_to 'List Rental', list_rental_path %>
+  </div>
+  <% if user_signed_in? %>
+    <div class="menu-item">
+      <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+    </div>
+  <% else %>
+    <div class="menu-item">
+      <%= link_to "Sign in", new_user_session_path %>
+    </div>
+    <div class="menu-item">
+      <%= link_to "Join", new_user_registration_path  %>
+    </div>
+  <% end %>
+  <!-- <div class="menu-item">
+    <a href="">|&nbsp;&nbsp;&nbsp;   Advertise </a>
+  </div> -->
+</div>
