@@ -55,4 +55,18 @@ class PagesController < ApplicationController
   def book_marked_listing
     
   end
+
+  def buy
+    
+  end
+
+  def sell
+    
+  end
+
+  def rent
+    
+  end
+
+
 end
