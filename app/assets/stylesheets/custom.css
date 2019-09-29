@@ -212,7 +212,7 @@ header {
 }
 
 .banner {
-    background-image: url("walp.jpg");
+    background-image: url("RESNwalp.jpg");
     background-size: 100% 100%;
     background-position: top center;
 
@@ -246,7 +246,7 @@ header {
     background: white;
     width: 100%;
     max-width: 600px;
-    border: 2px solid #000000;
+    border: 3px solid #fff;
     margin: auto;
     position: relative;
     border-radius: 6px;
@@ -260,24 +260,36 @@ header {
     vertical-align: top;
     height: 55px;
     font-weight: 500;
-    color: black;
+    color: #fff;
     font-size: 16px;
     letter-spacing: 0.6px;
     padding:0px 15px;
+    background-color: #ed4737;
+}
+.banner-text input[type="text"]::-webkit-input-placeholder { /* Edge */
+  color: #fff;
+}
+
+.banner-text input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+.banner-text input[type="text"]::placeholder {
+  color: #fff;
 }
 .banner-text input[type="submit"] {
-    background-image: url("search-icon.jpg");
+    background-image: url("search_icon_dark.png");
     width: 40px;
     position: absolute;
     top: 0px;
     border: none;
     height: 55px;
-    width: 50px;
+    width: 65px;
     right: 0px;
     background-size: 40px;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #006afe;
+    background-color: #fff;
 }
 
 section.info-listings {
