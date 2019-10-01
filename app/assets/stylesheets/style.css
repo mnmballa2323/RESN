@@ -3246,7 +3246,7 @@ textarea {
 ***********************/
 .newsletter {
   padding: 40px 0;
-  background-color: #ed4737;
+  background-color: #022366;
 }
 .newsletter__content {
   display: flex;
@@ -3290,7 +3290,7 @@ textarea {
   z-index: 2;
   right: 5px;
   width: 40%;
-  background-color: #060b12;
+  background-color: #5498fe;
   color: #ffffff;
   font-weight: 500;
   text-transform: uppercase;
