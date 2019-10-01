@@ -1657,6 +1657,10 @@ textarea {
 .footer__links-single .social_row{
   margin-left: 20px;
 }
+.footer__links-single .social_row p{
+  margin-top: 10px;
+  margin-left: 35px;
+}
 .footer__links-single .social_row .social_icon{
   width: 30px;
   margin: 0 15px;
