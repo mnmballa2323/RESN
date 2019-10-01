@@ -284,6 +284,7 @@ header {
     letter-spacing: 0.6px;
     padding:0px 15px;
     background-color: #ed4737;
+    margin-bottom: 15px;
 }
 .banner-text input[type="text"]::-webkit-input-placeholder { /* Edge */
   color: #fff;
