@@ -3,13 +3,21 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-4 footer__links-single">
-          <h3 class="footer__title">Contact Us</h3>
+          <%= image_tag "RESNlogo1.png", class: "logo" %>
+          <!-- <h3 class="footer__title">Contact Us</h3>
           <ul class="footer__list">
             <li><span class="footer--highlighted">Address:</span> <a href="#">200 East 65th Street 17NO, New York</a></li>
             <li><span class="footer--highlighted">Email:</span> <a href="mailto:ReaLand@support.com">ReaLand@support.com</a></li>
             <li><span class="footer--highlighted">Phone:</span> <a href="tel:+8802993999">(880)-288-3999</a></li>
             <li><span class="footer--highlighted">Fax:</span> <a href="#">(880)-288-3689</a></li>
-          </ul><!-- .footer__list -->
+          </ul> -->
+          <!-- .footer__list -->
+          <div class="row social_row">
+            <%= image_tag "icon_facebook.png", class: "social_icon" %>
+            <%= image_tag "icon_instagram.png", class: "social_icon" %>
+            <%= image_tag "icon_twitter.png", class: "social_icon" %>
+            <%= image_tag "icon_linkedin.png", class: "social_icon" %>
+          </div>
         </div><!-- .col -->
         <div class="col-sm-4 col-md-2 footer__links-single">
           <h3 class="footer__title">Buy</h3>
@@ -32,23 +40,23 @@
           </ul><!-- .footer__list -->
         </div><!-- .col -->
         <div class="col-sm-4 col-md-2 footer__links-single">
-          <h3 class="footer__title">My ReaLand</h3>
+          <h3 class="footer__title">Rent</h3>
           <ul class="footer__list">
-            <li><a href="#">Favorites</a></li>
-            <li><a href="#">Save Searches</a></li>
-            <li><%= link_to "Profile", my_profile_path %></li>
-            <li><a href="#">Settings</a></li>
-            <li><%= link_to "Join us", new_user_registration_path, class: 'topbar__link topbar__link--white'%></li>
+            <li><a href="#">Rent Your Home</a></li>
+            <li><a href="#">Screen Tenants</a></li>
+            <li><%#= link_to "Profile", my_profile_path %><a href="#">Why Rent</a></li>
+            <li><a href="#">Guides & Rules</a></li>
+            <li><%#= link_to "Join us", new_user_registration_path, class: 'topbar__link topbar__link--white'%><a href="#">Others</a></li>
           </ul><!-- .footer__list -->
         </div><!-- .col -->
         <div class="col-sm-4 col-md-2 footer__links-single">
-          <h3 class="footer__title">ReaLand Estate</h3>
+          <h3 class="footer__title">Company</h3>
           <ul class="footer__list">
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Management Team</a></li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
             <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
           </ul><!-- .footer__list -->
         </div><!-- .col -->
       </div><!-- .row -->

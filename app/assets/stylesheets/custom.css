@@ -203,6 +203,9 @@ header {
     vertical-align: middle;
     margin: 0px 50px;
 }
+.menu-logo a{
+    margin-left: 45px;
+}
 .menu-item a {
     color: black;
     font-weight: 500;
@@ -211,7 +214,7 @@ header {
 }
 
 .banner {
-    background-image: url("RESNwalp.jpg");
+    background-image: url("RESNwalp1_no_bubbles.jpg");
     background-size: 100% 100%;
     background-position: top center;
 
@@ -226,7 +229,7 @@ header {
 
 .banner-text h5 {
     color: white;
-    font-size: 60px;
+    font-size: 50px;
     text-transform: capitalize;
     font-weight: 700;
     letter-spacing: 1px;
@@ -236,11 +239,28 @@ header {
 .banner-text p {
     color: white;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 0.8px;
     margin-bottom: 25px;
 }
-
+.banner-text a {
+    display: inline-block;
+    border: 1px solid #ed4737;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 9px 26px;
+    letter-spacing: 0.6px;
+    color: #ed4737;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.banner-text a.active, a:active{
+    color: #006aff;
+}
+.banner-text a:hover{
+    color: #006aff;
+}
 .banner-text form {
     background: white;
     width: 100%;
@@ -378,7 +398,6 @@ body {
     top: 20px;
     left: 0px;
 }
-
 .menu-hamburger {
     display: block;
     position: absolute;

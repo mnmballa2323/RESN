@@ -943,7 +943,7 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  border: 1px solid #1fc341;
+  border: 1px solid #5498fe;
 }
 input::placeholder,
 textarea::placeholder {
@@ -1650,6 +1650,17 @@ textarea {
 .footer__links-single {
   margin-bottom: 30px;
 }
+.footer__links-single .logo {
+  margin-top: -30px;
+  margin-bottom: -25px;
+}
+.footer__links-single .social_row{
+  margin-left: 20px;
+}
+.footer__links-single .social_row .social_icon{
+  width: 30px;
+  margin: 0 15px;
+}
 .footer__links-single:last-child {
   margin-bottom: 0;
 }
@@ -1676,7 +1687,7 @@ textarea {
   transition: 0.3s color ease-out;
 }
 .footer__list a:hover {
-  color: #1fc341;
+  color: #5498fe;
 }
 .footer__list .footer--highlighted {
   display: inline-block;
@@ -3235,7 +3246,7 @@ textarea {
 ***********************/
 .newsletter {
   padding: 40px 0;
-  background-color: #5498fe;
+  background-color: #ed4737;
 }
 .newsletter__content {
   display: flex;
@@ -3248,6 +3259,7 @@ textarea {
 }
 .newsletter__icon {
   flex-shrink: 0;
+  width: 60px;
   height: 100%;
 }
 .newsletter__text-content {
@@ -3278,7 +3290,7 @@ textarea {
   z-index: 2;
   right: 5px;
   width: 40%;
-  background-color: #1fc341;
+  background-color: #060b12;
   color: #ffffff;
   font-weight: 500;
   text-transform: uppercase;
