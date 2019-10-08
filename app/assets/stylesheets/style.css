@@ -2738,7 +2738,12 @@ textarea {
   background-color: #ffffff;
 }
 .main-listing__wrapper {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+.main-listing__wrapper_Square {
+  padding:25px;
+
+  
 }
 .main-listing__form-title {
   display: inline-block;
@@ -2794,7 +2799,8 @@ textarea {
 }
 .main-listing__form-container .main-listing__form-field {
   width: 48%;
-  margin-bottom: 0;
+  margin-bottom:-2px;
+  
 }
 .main-listing__form-field {
   height: 41px;
@@ -4285,6 +4291,13 @@ textarea {
   margin-bottom: 20px;
   font-size: 13px;
 }
+.ht-field_square {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
 .listing-search__btn {
   height: 41px;
   display: inline-block;
@@ -5167,6 +5180,9 @@ div.similar-home:last-of-type {
   border-radius: 4px;
 }
 .form-calculator__group .ht-field {
+  margin-bottom: 0;
+}
+.form-calculator__group .ht-field_square {
   margin-bottom: 0;
 }
 @media only screen and (min-width: 1200px) {
