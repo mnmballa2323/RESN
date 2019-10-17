@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  description: MyText
+  building_type: MyString
+  built_year: MyString
+  square_footage: 1
+  building_subtype: MyString
+  building_type: MyString
+  HOA_dues: MyString
+  fee_includes: MyString
+  HOA: false
+
+two:
+  name: MyString
+  address: MyString
+  description: MyText
+  building_type: MyString
+  built_year: MyString
+  square_footage: 1
+  building_subtype: MyString
+  building_type: MyString
+  HOA_dues: MyString
+  fee_includes: MyString
+  HOA: false

@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_10_115505) do
+ActiveRecord::Schema.define(version: 2019_10_17_134211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "buildings", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.text "description"
+    t.string "building_type"
+    t.string "built_year"
+    t.integer "square_footage"
+    t.string "building_subtype"
+    t.string "HOA_dues"
+    t.string "fee_includes"
+    t.boolean "HOA"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

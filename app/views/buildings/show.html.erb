@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @building.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @building.address %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @building.description %>
+</p>
+
+<p>
+  <strong>Building type:</strong>
+  <%= @building.building_type %>
+</p>
+
+<p>
+  <strong>Built year:</strong>
+  <%= @building.built_year %>
+</p>
+
+<p>
+  <strong>Square footage:</strong>
+  <%= @building.square_footage %>
+</p>
+
+<p>
+  <strong>Building subtype:</strong>
+  <%= @building.building_subtype %>
+</p>
+
+<p>
+  <strong>Building type:</strong>
+  <%= @building.building_type %>
+</p>
+
+<p>
+  <strong>Hoa dues:</strong>
+  <%= @building.HOA_dues %>
+</p>
+
+<p>
+  <strong>Fee includes:</strong>
+  <%= @building.fee_includes %>
+</p>
+
+<p>
+  <strong>Hoa:</strong>
+  <%= @building.HOA %>
+</p>
+
+<%= link_to 'Edit', edit_building_path(@building) %> |
+<%= link_to 'Back', buildings_path %>

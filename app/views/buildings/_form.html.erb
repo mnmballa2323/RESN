@@ -1,0 +1,72 @@
+<%= form_with(model: building, local: true) do |form| %>
+  <% if building.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(building.errors.count, "error") %> prohibited this building from being saved:</h2>
+
+      <ul>
+      <% building.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :building_type %>
+    <%= form.text_field :building_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :built_year %>
+    <%= form.text_field :built_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :square_footage %>
+    <%= form.number_field :square_footage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :building_subtype %>
+    <%= form.text_field :building_subtype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :building_type %>
+    <%= form.text_field :building_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :HOA_dues %>
+    <%= form.text_field :HOA_dues %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fee_includes %>
+    <%= form.text_field :fee_includes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :HOA %>
+    <%= form.check_box :HOA %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
