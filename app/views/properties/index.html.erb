@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Property type</th>
+      <th>Offer</th>
+      <th>Rental period</th>
+      <th>Property price</th>
+      <th>Propert area</th>
+      <th>Property room</th>
+      <th>Description</th>
+      <th>Google map address</th>
+      <th>Friendly address</th>
+      <th>Longtitude</th>
+      <th>Latitude</th>
+      <th>Region</th>
+      <th>Building year</th>
+      <th>Bedrooms</th>
+      <th>Bathrooms</th>
+      <th>Lot size</th>
+      <th>Parking</th>
+      <th>Cooling</th>
+      <th>Sewer</th>
+      <th>Water</th>
+      <th>Exersie room</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.title %></td>
+        <td><%= property.property_type %></td>
+        <td><%= property.offer %></td>
+        <td><%= property.rental_period %></td>
+        <td><%= property.property_price %></td>
+        <td><%= property.propert_area %></td>
+        <td><%= property.property_room %></td>
+        <td><%= property.description %></td>
+        <td><%= property.google_map_address %></td>
+        <td><%= property.friendly_address %></td>
+        <td><%= property.longtitude %></td>
+        <td><%= property.latitude %></td>
+        <td><%= property.region %></td>
+        <td><%= property.building_year %></td>
+        <td><%= property.bedrooms %></td>
+        <td><%= property.bathrooms %></td>
+        <td><%= property.lot_size %></td>
+        <td><%= property.parking %></td>
+        <td><%= property.cooling %></td>
+        <td><%= property.sewer %></td>
+        <td><%= property.water %></td>
+        <td><%= property.exersie_room %></td>
+        <td><%= link_to 'Show', property %></td>
+        <td><%= link_to 'Edit', edit_property_path(property) %></td>
+        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Property', new_property_path %>
