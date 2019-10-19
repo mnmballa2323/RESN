@@ -31,8 +31,8 @@
               <div class="manage-list__expire-date"><%= property.created_at.to_date %></div>
               
               <div class="manage-list__action">
-                <a href="#" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
-                <a href="#" class="remove"><i class="fa fa-times" aria-hidden="true"></i> Remove</a>
+                <td><%= link_to '<span class="edit"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>'.html_safe, edit_property_path(property) %></td>
+                <%= link_to '<span class="remove"><i class="fa fa-times" aria-hidden="true"></i>Remove</span>'.html_safe, property, method: :delete, data: { confirm: 'Are you sure?' } %>
               </div>
             </li><!-- .manage-list__item" -->
             <% end %>
