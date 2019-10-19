@@ -12,7 +12,7 @@
     <span class="settings-block__title">Manage Listing</span>
     <ul class="settings">
         <li class="setting <%= cp(properties_path)%>"><a href="my_property.html" class="setting__link"><i class="ion-ios-home-outline setting__icon"></i>My Property</a></li>
-        <li class="setting"><a href="submit_property.html" class="setting__link"><i class="ion-ios-upload-outline setting__icon"></i>Submit New Property</a></li>
+        <li class="setting <%= cp(new_property_path)%>"><a href="<%= new_property_path %>" class="setting__link"><i class="ion-ios-upload-outline setting__icon"></i>Add New Property</a></li>
         <li class="setting"><a href="package.html" class="setting__link"><i class="ion-ios-cart-outline setting__icon"></i>My Packages</a></li>
     </ul>
 </div>
