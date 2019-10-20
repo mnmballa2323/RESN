@@ -68,5 +68,9 @@ class PagesController < ApplicationController
     
   end
 
+  def property_detail
+    
+  end
+
 
 end

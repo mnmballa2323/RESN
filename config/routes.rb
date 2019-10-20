@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   get 'buy' => 'pages#buy'
   get 'sell' => 'pages#sell'
   get 'rent' => 'pages#rent'
+  get 'property_detail' => 'pages#property_detail'
 end
