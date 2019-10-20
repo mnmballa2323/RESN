@@ -23,7 +23,7 @@
                 </div><!-- manage-list__item-img -->
           
                 <div class="manage-list__item-detail">
-                  <h3 class="listing__title"><a href="single_property_1.html"><%= property.title %></a></h3>
+                  <h3 class="listing__title"><a href="<%= property_path(property) %>"><%= property.title %></a></h3>
                   <p class="listing__location"><span class="ion-ios-location-outline listing__location-icon"><%= property.friendly_address %></span> </p>
                   <p class="listing__price"><%= property.property_price %></p>
                 </div>
@@ -43,4 +43,3 @@
     </div>
   </div>
 </section>  
-<%= render 'partial/news_letter' %>
