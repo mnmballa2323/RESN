@@ -15,7 +15,43 @@
   <div class="main-listing__main">
     <div class="container">
       <div class="row">
-        <%= render 'partial/side_bar_rental_list' %>
+        <section class="homes">
+        <div class="container">
+          <div class="homes-head">
+            <h5> Join The World's Largest Real Estate Social Network
+            </h5>
+            <h6></h6>
+          </div>
+          <div class="homes-data">
+            <div class="row">
+              <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                <div class="home-box">
+                  <%= image_tag "BuyAHome.png" %>
+                  <h5> SELLL AS RESN </h5>
+                  <p> Find your dream home on RESN and one of our local and licensed agents will properly guide you thru the transaction.</p>
+                  <a href=""> SELLL AS RESN</a>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                <div class="home-box">
+                 <%= image_tag "ForSale.png" %>
+                  <h5> SELLL AS Agent</h5>
+                  <p> Sell your current home with RESN and one of our local and licensed agents will properly guide you thru the transaction.</p>
+                  <a href=""> SELLL AS Agent </a>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                <div class="home-box">
+                  <%= image_tag "RentAHome.png" %>
+                  <h5> SELLL AS Owner </h5>
+                  <p> Rent a home for a vacation or permanent place of residence and RESN will properly guide you thru the transaction.</p>
+                  <a href=""> SELLL AS Owner </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
         <%= render 'partial/rental_property'%>
       </div><!-- row -->
     </div><!-- .container -->
