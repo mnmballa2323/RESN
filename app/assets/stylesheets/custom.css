@@ -220,6 +220,13 @@ header {
 
 }
 
+.service_banner {
+    background-image: url("service_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+
+}
+
 .agent_banner {
     background-image: url("agent_banner.png");
     background-size: 100% 100%;
@@ -244,7 +251,7 @@ header {
 .banner-input {
     float: left;
     width: 100%;
-    margin-bottom: 435px;
+    margin-bottom: 410px;
     margin-top: -195px;
     text-align: center;
     margin-left: 18rem;
@@ -344,6 +351,20 @@ header {
     background-color: #fff;
 }
 
+.agent-submit {
+    background-image: url("search_icon_dark.png");
+    width: 40px;
+    position: absolute;
+    top: 0px;
+    border: none;
+    height: 55px;
+    width: 65px;
+    right: 0px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+}
 section.info-listings {
     padding: 60px 0px 40px 0px;
 }
