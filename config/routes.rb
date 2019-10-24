@@ -22,4 +22,8 @@ Rails.application.routes.draw do
   get 'sell' => 'pages#sell'
   get 'rent' => 'pages#rent'
   get 'property_detail' => 'pages#property_detail'
+  get 'mortgage' => 'pages#mortgage' 
+  get 'insurance' => 'pages#insurance' 
+  get 'mobileApps' => 'pages#mobile_apps' 
+  get 'hotels' => 'pages#hotels' 
 end

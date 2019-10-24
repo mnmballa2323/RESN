@@ -232,6 +232,38 @@ header {
     background-size: 100% 100%;
     background-position: top center;
 }
+
+.insurance_banner {
+    background-image: url("insurance_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.mortgage_banner {
+    background-image: url("mortgage_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+
+.mobile_banner {
+    background-image: url("MobileApps.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.hotels_banner {
+    background-image: url("hotels_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.about_banner {
+    background-image: url("about_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
 .banner-text {
     float: left;
     width: 100%;
@@ -267,12 +299,13 @@ header {
 }
 
 .agent-banner-text h5 {
-    color: black;
+    color: white;
     font-size: 40px;
     text-transform: capitalize;
     font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 12px;
+    margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 .banner-text p {

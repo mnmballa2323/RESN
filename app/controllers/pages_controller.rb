@@ -72,5 +72,26 @@ class PagesController < ApplicationController
     
   end
 
+  def mortgage
+    
+  end
+
+  def insurance
+    
+  end
+
+
+  def property_detail
+    
+  end
+
+  def mobile_apps
+
+  end
+
+
+  def hotels
+
+  end
 
 end
