@@ -94,4 +94,17 @@ class PagesController < ApplicationController
 
   end
 
+  def partners
+  end
+
+  def investors
+  end
+
+  def team
+  end
+
+  def travel
+    
+  end
+
 end

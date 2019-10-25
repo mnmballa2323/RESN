@@ -23,13 +23,13 @@
     <% end %>
   </div>
   <div class="menu-item">
-    <%= link_to 'Realtors', agents_path %>
+    <%= link_to 'Realtors', realtors_path %>
   </div>
   <div class="menu-item">
     <%=link_to "Services", packages_path %>
   </div>
   <div class="menu-item">
-    <%= link_to 'List Rental', new_property_path %>
+    <%= link_to 'List New', new_property_path %>
   </div>
   <% if user_signed_in? %>
     <div class="menu-item">

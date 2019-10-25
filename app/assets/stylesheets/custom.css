@@ -252,6 +252,45 @@ header {
     background-position: top center;
 }
 
+.contact_banner {
+    background-image: url("contact_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.partners_banner {
+    background-image: url("partners_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.investors_banner {
+    background-image: url("investors_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+.team_banner {
+    background-image: url("team_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.blog_banner {
+    background-image: url("blog_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+.travel_banner {
+    background-image: url("travel_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+}
+
+div[dir="rtl"] select option {
+    direction: rtl;
+    text-align: right;
+}
 .hotels_banner {
     background-image: url("hotels_banner.png");
     background-size: 100% 100%;

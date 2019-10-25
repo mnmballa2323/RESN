@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get 'agents' => 'pages#agents'
+  get 'realtors' => 'pages#agents'
   get 'single_agent' => 'pages#single_agent'
   get 'list_rental' => 'pages#list_rental'
   get 'submit_property' => 'pages#submit_property'
@@ -26,4 +26,8 @@ Rails.application.routes.draw do
   get 'insurance' => 'pages#insurance' 
   get 'mobileApps' => 'pages#mobile_apps' 
   get 'hotels' => 'pages#hotels' 
+  get 'partners' => 'pages#partners' 
+  get 'investors' => 'pages#investors' 
+  get 'team' => 'pages#team' 
+  get 'travel' => 'pages#travel'
 end
