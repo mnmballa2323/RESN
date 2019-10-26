@@ -107,4 +107,8 @@ class PagesController < ApplicationController
     
   end
 
+  def list_new
+    
+  end
+
 end

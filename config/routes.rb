@@ -30,4 +30,7 @@ Rails.application.routes.draw do
   get 'investors' => 'pages#investors' 
   get 'team' => 'pages#team' 
   get 'travel' => 'pages#travel'
+  get 'list_new' => 'pages#list_new'
+  get '/buy/search' => 'pages#buy_search'
+  get '/rent/search' => 'pages#rent_search'
 end

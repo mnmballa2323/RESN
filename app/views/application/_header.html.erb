@@ -29,7 +29,7 @@
     <%=link_to "Services", packages_path %>
   </div>
   <div class="menu-item">
-    <%= link_to 'List New', new_property_path %>
+    <%= link_to 'List New', list_new_path %>
   </div>
   <% if user_signed_in? %>
     <div class="menu-item">
@@ -40,7 +40,7 @@
       <%= link_to "Sign in", new_user_session_path %>
     </div>
     <div class="menu-item">
-      <%= link_to "Join", new_user_registration_path  %>
+      <%= link_to "Sign up", new_user_registration_path  %>
     </div>
   <% end %>
   <!-- <div class="menu-item">

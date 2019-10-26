@@ -2,6 +2,10 @@
 /*Roboto (Integrated From Google Fonts Library)*/
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 
+@font-face {
+    font-family: 'FARRAY';
+    src:url('FARRAY.otf');
+  }
 body {
     font-family: Roboto;
 }
@@ -141,6 +145,16 @@ section.homes {
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
 }
+
+.login-background{
+    background: url("login_banner.png") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
 .home-box:hover {
 transform:scale(1.05);
 -webkit-transform:scale(1.05);
@@ -222,6 +236,20 @@ header {
 
 .service_banner {
     background-image: url("service_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+
+}
+
+.buy_banner {
+    background-image: url("buy_banner.png");
+    background-size: 100% 100%;
+    background-position: top center;
+
+}
+
+.rent_banner {
+    background-image: url("rent_banner.png");
     background-size: 100% 100%;
     background-position: top center;
 
@@ -330,11 +358,12 @@ div[dir="rtl"] select option {
 
 .banner-text h5 {
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     text-transform: capitalize;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    font-family: 'FARRAY';
 }
 
 .agent-banner-text h5 {
@@ -345,6 +374,7 @@ div[dir="rtl"] select option {
     letter-spacing: 1px;
     margin-bottom: 25px;
     margin-top: 10px;
+    font-family: 'FARRAY';
 }
 
 .banner-text p {
