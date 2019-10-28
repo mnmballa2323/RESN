@@ -32,15 +32,33 @@
     <%= link_to 'List New', list_new_path %>
   </div>
   <% if user_signed_in? %>
-    <div class="menu-item">
-      <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+    <div class="menu-item" style="float: right;">
+    <div class="dropdown">
+    <a href=""# class="account" >
+    <img src="https://a0.muscache.com/defaults/user_pic-50x50.png?v=3" class="profile-circle"/>
+    </a>
+    <div class="submenu" style="display: none; ">
+    <ul class="root">
+    <li >
+
+    <%= link_to 'Profile', current_user.profile.first ? profile_path(current_user.profile.first.id) : new_profile_path   %>    
+    
+    </li>
+    <li>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete  %>    
+    </li>
+    </ul>
     </div>
+    </div>
+    </div>
+
+    
   <% else %>
+  <div class="menu-item">
+      <%= link_to "Sign up", new_user_registration_path  %>
+    </div>
     <div class="menu-item">
       <%= link_to "Sign in", new_user_session_path %>
-    </div>
-    <div class="menu-item">
-      <%= link_to "Sign up", new_user_registration_path  %>
     </div>
   <% end %>
   <!-- <div class="menu-item">
