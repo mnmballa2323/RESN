@@ -30,7 +30,7 @@
           <%= form.text_field :ph_no , class: "my-profile__field" %>
 
           <label for="profile-email" class="my-profile__label">Email</label>
-          <input type="email" value="<%= current_user.email%>" class="my-profile__field" id="profile-email">
+          <input type="email" value="<%= current_user.email%>" class="my-profile__field" id="profile-email", readonly = true>
 
           <label for="profile-twitter" class="my-profile__label">Twitter Address</label>
           <%= form.text_field :twitter_add , class: "my-profile__field" %>            
