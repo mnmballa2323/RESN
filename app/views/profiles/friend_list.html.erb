@@ -21,7 +21,7 @@
                 <br/>
                 <br/>
                 <div class="_teetq4b">
-                <%= link_to 'Edit Profile', edit_profile_path(@profile),  style: "color: #ED4737"%></div>
+                <%= link_to 'Edit Profile', edit_profile_path(current_user.profile[0]),  style: "color: #ED4737"%></div>
                 <hr/>
           <div class="_czm8crp"><%= current_user.email %></div>
             </div>
@@ -29,13 +29,12 @@
           <br/>
           
         </div>
-        <div class="settings-block">
-          <ul class="settings" style="margin-left: 2rem">
-          <li class="setting setting--current"><a href="" class="setting__link"><i class="ion-ios-person-outline
+        <div class="settings-block" style="margin-left: 2rem">
+          <ul class="settings">
+          <li class="setting"><a href="<%= profiles_path %>" class="setting__link"><i class="ion-ios-person-outline
 
           setting__icon"></i>Profile</a></li>
-
-              <li class="setting"><a href="/find-friend" class="setting__link"><i class="ion-man
+              <li class="setting setting--current"><a href="/find-friend" class="setting__link "><i class="ion-man
 
               setting__icon"></i>Find Friends</a></li>
               <li class="setting"><a href="" class="setting__link"><i class="ion-ios-unlocked-outline setting__icon"></i>Change Password</a></li>
@@ -49,41 +48,43 @@
       </div><!-- .col -->
 
       <div class="col-md-8" style=" margin-left 1rem">
-      <div class="_1ekkhy94">Hi, I’m <%= @profile.first_name   %> <%= @profile.last_name   %></div>
       <br/>
       <br/>
-      <h6 class="bookmarked-listing__headline">Basic Informataion</h6>
+      <h6 class="bookmarked-listing__headline">My Friends</h6>
+
     <hr/>
-      <div class="col-md-12 " style="margin: 1rem;">
       
-      <i class="ion-android-microphone">      <%= @profile.ph_no%></i>
-      <br/>
 
-      <br/>
-      <br/>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="people-nearby">
+              
+            <% current_user.profile[0].friend_lists.each do |id| %>
+              <div class="nearby-user">
+                <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="https://a0.muscache.com/defaults/user_pic-225x225.png?v=3" alt="user" class="profile-photo-lg">
+                  </div>
+                  <div class="col-md-7 col-sm-7">
+                    <h5>
+                    <a href="<%=  profile_path(Profile.where(id: id.friend_id )[0])%>" class= "profile-link"><%= Profile.where(id: id.friend_id )[0].first_name%><a/>
+                    </h5>
+                  <p><%= Profile.where(id: id.friend_id )[0].user.email %></p>
 
-      <i class="ion-social-facebook">     <%= @profile.facebook_add %></i>
-      <br/>
-      <br/>
-      <br/>
+                  </div>
+                  <div class="col-md-3 col-sm-3">
 
-      <i class="ion-social-twitch
-
-      ">      <%= @profile.twitter_add %></i>
-      <br/>
-      <br/>
-      <br/>
-
-      <i class="ion-social-linkedin
-
-      ">      <%= @profile.linkedin_add %></i>
-      <br/>
-      <br/>
-      <br/>
-      <hr/>
-      <h3 class="bookmarked-listing__headline">About me</h3>
-      <p><%= @profile.about_me %></p>
-
+                  </div>
+                </div>
+              </div>
+            <% end %>
+              
+             
+            </div>
+    	</div>
+	</div>
+</div>
       </div><!-- .col -->
       
       </div>

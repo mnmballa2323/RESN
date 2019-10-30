@@ -15,11 +15,13 @@ before_action :authenticate_user!
 
   # GET /profiles/new
   def new
+    @flag = true
     @profile = Profile.new
   end
 
   # GET /profiles/1/edit
   def edit
+    @flag = false
   end
 
   # POST /profiles
@@ -44,7 +46,7 @@ before_action :authenticate_user!
   def update
     respond_to do |format|
       if @profile.update(profile_params)
-        format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
+        format.html { redirect_to profiles_url, notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @profile }
       else
         format.html { render :edit }
@@ -62,6 +64,26 @@ before_action :authenticate_user!
       format.json { head :no_content }
     end
   end
+
+  def find_friends 
+  end
+
+  def friend_list
+  end
+  def add_friend
+    id = params[:friend_id]
+    @new_friend =  current_user.profile[0].friend_lists.new(friend_id: id)
+    respond_to do |format|
+      if @new_friend.save
+        format.html { redirect_to find_friend_path, notice: 'Profile was successfully updated.' }
+      else
+        format.json { render json: @profile.errors, status: :unprocessable_entity }        
+      end
+    end
+    
+  end
+
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

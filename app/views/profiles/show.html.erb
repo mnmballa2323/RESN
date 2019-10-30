@@ -1,74 +1,57 @@
 
 <section class="my-profile">
-  <div class="container">
-    <ul class="ht-breadcrumbs ht-breadcrumbs--y-padding ht-breadcrumbs--b-border">
-        <li class="ht-breadcrumbs__item"><a href="#" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Home</span></a></li>
-        <li class="ht-breadcrumbs__item"><a href="#" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Pages</span></a></li>
-        <li class="ht-breadcrumbs__item"><span class="ht-breadcrumbs__page">My Profile</span></li>
-    </ul><!-- .ht-breadcrumb -->
+<div class="container">
+  <ul class="ht-breadcrumbs ht-breadcrumbs--y-padding ht-breadcrumbs--b-border">
+      <li class="ht-breadcrumbs__item"><a href="#" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Home</span></a></li>
+      <li class="ht-breadcrumbs__item"><a href="#" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Pages</span></a></li>
+      <li class="ht-breadcrumbs__item"><span class="ht-breadcrumbs__page">My Profile</span></li>
+  </ul><!-- .ht-breadcrumb -->
 
-    <div class="my-profile__container">
-      <div class="row">
-        <div class="col-md-3">
-          <h2 class="bookmarked-listing__headline">Howdy, <strong><%= @profile.first_name %></strong></h2>
-          <div class="settings-block">
-              <span class="settings-block__title">Manage Account</span>
-              <ul class="settings">
-                  <li class="setting setting--current"><a href="" class="setting__link"><i class="ion-ios-person-outline setting__icon"></i>My Profile</a></li>
-          </div><!-- .settings-block -->
+  <div class="my-profile__container">
+    <div class="row">
+      <div class="col-md-4" style="    width: 33.33333333333333% !important; float: left !important;">
+        <div class="profile-left">
+          <section>
+            <div class="pic-wrapper">
+              <div style="    box-sizing: border-box;">
+                <div style="display:inline-block"><div class="_e296pg" style="height:120px;width:120px; display:block">
+                  <img class="_1mgxxu3" src="https://a0.muscache.com/defaults/user_pic-225x225.png?v=3" height="120" width="120" alt="12" title="12">
+                </div>
+                </div>
+                <br/>
+                <br/>
+                <div class="_teetq4b">
+                <%= link_to 'Add Friend', edit_profile_path(@profile),  style: "color: #ED4737"%></div>
+                <hr/>
+          <div class="_czm8crp"><%= @profile.user.email %></div>
+            </div>
+          </section>
+          <br/>
+          
+        </div>
+        <div class="settings-block" >
+          
+      </div><!-- .settings-block -->
+        
+      </div><!-- .col -->
 
+      <div class="col-md-8" style=" margin-left 1rem">
+      <div class="_1ekkhy94">Hi, I’m <%= @profile.first_name   %> <%= @profile.last_name   %></div>
+      <br/>
+      <br/>
+      <h6 class="bookmarked-listing__headline">Basic Informataion</h6>
+    <hr/>
+      <div class="col-md-12 " style="margin: 1rem;">
+      
+      
+      <h3 class="bookmarked-listing__headline">About me</h3>
+      <p><%= @profile.about_me %></p>
 
-          <div class="settings-block">
-              <ul class="settings">
-                  <li class="setting"><a href="#" class="setting__link"><i class="ion-ios-unlocked-outline setting__icon"></i>Change Password</a></li>
-                  <li class="setting"><a href="#" class="setting__link"><i class="ion-ios-undo-outline setting__icon"></i>Log Out</a></li>
-              </ul><!-- settings -->
-          </div><!-- .settings-block -->
-        </div><!-- .col -->
-          <div class="col-md-4">
-        <%= form_with(model: @profile, local: true) do |form| %>
+      </div><!-- .col -->
+      
+      </div>
 
-            <label for="profile-first-name" class="my-profile__label">First Name</label>
-            <%= form.text_field :first_name, class: "my-profile__field"  %>
-
-            <label for="profile-last-name" class="my-profile__label">Last Name</label>
-            <%= form.text_field :last_name , class: "my-profile__field" %>
-
-
-            <label for="profile-number" class="my-profile__label">Phone Number</label>
-            <%= form.text_field :ph_no , class: "my-profile__field" %>
-
-            <label for="profile-email" class="my-profile__label">Email</label>
-            <input type="email" value="<%= current_user.email%>" class="my-profile__field" id="profile-email", readonly = true>
-
-            <label for="profile-twitter" class="my-profile__label">Twitter Address</label>
-            <%= form.text_field :twitter_add , class: "my-profile__field" %>            
-
-            <label for="profile-facebook" class="my-profile__label">Facebook Address</label>
-            <%= form.text_field :facebook_add , class: "my-profile__field" %>            
-            
-
-            <label for="profile-linkedin" class="my-profile__label">Linkedin Address</label>
-            <%= form.text_field :linkedin_add , class: "my-profile__field" %>            
-            
-          </div><!-- .col -->
-                
-            <div class="col-md-5">
-              <label for="profile-introduce" class="my-profile__label">About Me</label>
-              <%= form.text_area :about_me ,  id: "profile-introduce", rows: "20", class: "my-profile__field" %>
-
-              <label for="profile-avatar" class="my-profile__label">Image Url</label>
-              <div class="">
-              <%= form.text_field :iamge_url %>                  
-              </div>
-              <br/>
-
-              <%= form.submit 'Save', class: "contact-form__submit contact-form__submit--contact",  style: "background-color: #EC4836; max-width: 100%"%>
-
-            </div><!-- .col -->
-        <% end %>
-
-      </div><!-- .row -->
-    </div><!-- .my-profile__container -->
-  </div><!-- .container -->
+    </div><!-- .row -->
+  </div><!-- .my-profile__container -->
+</div><!-- .container -->
 </section><!-- .my-profile -->

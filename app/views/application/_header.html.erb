@@ -41,7 +41,7 @@
     <ul class="root">
     <li >
 
-    <%= link_to 'Profile', current_user.profile.first ? profile_path(current_user.profile.first.id) : new_profile_path   %>    
+    <%= link_to 'Profile', current_user.profile.first ? profiles_path : new_profile_path   %>    
     
     </li>
     <li>
