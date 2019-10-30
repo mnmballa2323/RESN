@@ -61,7 +61,8 @@
             <div class="people-nearby">
               
             <% Profile.first(10).each do |profile| %>
-              <%next if (profile.id == current_user.profile[0].id || current_user.profile[0].friend_lists.where(friend_id: profile.id)) %>
+              <%=   %>
+              <%next if (profile.id == current_user.profile[0].id || current_user.profile[0].friend_lists.where(friend_id: profile.id)[0]) %>
               <div class="nearby-user">
                 <div class="row">
                   <div class="col-md-2 col-sm-2">
