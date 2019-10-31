@@ -20,7 +20,9 @@
                 </div>
                 <br/>
                 <br/>
-                <div class="_teetq4b"></div>
+                <div class="_teetq4b">
+                  <%= (current_user.profile[0].friend_lists.where(friend_id: @profile.id)[0]) ? (button_to "Remove Friend", { :controller => "profiles", :action => "remove_friend", :friend_id => @profile.id}) : (button_to "Add Friend", { :controller => "profiles", :action => "add_friend", :friend_id => @profile.id}) %>
+                </div>
                 <hr/>
           <div class="_czm8crp"><%= @profile.user.email %></div>
             </div>

@@ -83,6 +83,15 @@ before_action :authenticate_user!
     
   end
 
+  def remove_friend
+    id = params[:friend_id]
+    @friend = FriendList.where(friend_id: id)
+    @friend.destroy_all
+    respond_to do |format|
+      format.html { redirect_to find_friend_path, notice: 'Profile was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
   
 
   private

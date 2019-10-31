@@ -37,5 +37,6 @@ Rails.application.routes.draw do
   get '/find-friend' => 'profiles#find_friends'
   get '/friend_list' => 'profiles#friend_list'
   post "profiles/add_friend" => "profiles#add_friend"
-
+  post "profiles/remove_friend" => "profiles#remove_friend"
+  
 end
