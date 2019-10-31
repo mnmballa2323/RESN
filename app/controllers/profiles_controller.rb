@@ -88,7 +88,7 @@ before_action :authenticate_user!
     @friend = FriendList.where(friend_id: id)
     @friend.destroy_all
     respond_to do |format|
-      format.html { redirect_to find_friend_path, notice: 'Profile was successfully destroyed.' }
+      format.html { redirect_to find_friend_path, notice: 'Remove from the list.' }
       format.json { head :no_content }
     end
   end
