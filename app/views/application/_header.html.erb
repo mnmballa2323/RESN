@@ -32,6 +32,9 @@
     <%= link_to 'List New', list_new_path %>
   </div>
   <% if user_signed_in? %>
+  <div class="menu-item">
+      <%= link_to "Messages", '/inbox' %>
+    </div>
     <div class="menu-item" style="float: right;">
     <div class="dropdown">
     <a href=""# class="account" >

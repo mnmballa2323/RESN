@@ -93,6 +93,8 @@ before_action :authenticate_user!
     end
   end
   
+  def messages
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
