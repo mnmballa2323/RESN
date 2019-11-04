@@ -3,6 +3,8 @@ Rails.application.configure do
 
   config.action_cable.url = "ws://resn.herokuapp.com/cable"
 
+  config.action_cable.allowed_request_origins = ['https://resn.herokuapp.com']
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
