@@ -74,7 +74,9 @@
 
                   </div>
                   <div class="col-md-3 col-sm-3">
-
+                  <%= link_to(chats_path(:other_user => Profile.where(id: id.friend_id )[0].user.id), method: :post , class: 'btn btn-primary pull-right', style: "background-color: #EC4836; border-color: #EC4836") do %>
+                    Message
+                    <% end %>
                   </div>
                 </div>
               </div>

@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  mount ActionCable.server => '/cable'
+  
   resources :notifications
   resources :profiles
   resources :properties
   devise_for :users
   root 'home#index'
+  resources :chats, only: [:index, :show, :create]
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get 'realtors' => 'pages#agents'
@@ -40,4 +44,7 @@ Rails.application.routes.draw do
   post "profiles/add_friend" => "profiles#add_friend"
   post "profiles/remove_friend" => "profiles#remove_friend"
   get "/inbox" => "profiles#messages"
+
+  resources :messages, only:[:create]
+
 end

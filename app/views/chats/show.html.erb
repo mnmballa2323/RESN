@@ -1,0 +1,68 @@
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="messaging">
+      <div class="inbox_msg">
+        <div class="inbox_people">
+          <div class="headind_srch">
+            <div class="recent_heading">
+              <h4>Conversations</h4>
+            </div>
+          </div>
+          <div class="inbox_chat">
+
+          <% if @existing_chats_users %>
+            <% @existing_chats_users.each do |other_user| %>
+              <% if other_user != current_user %>
+
+              <%= link_to(chats_path(current_user, :other_user => other_user.id), method: :post) do %>
+                <div 
+                class="<%= (other_user.id == @other_user.id ) ? 'chat_list active_chat' : 'chat_list' %>"
+                >
+                <div class="chat_people">
+                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_ib">
+                    <h5><%= other_user.profile[0].first_name %> <span class="chat_date"></span></h5>
+                    <p><%= find_chat(other_user).messages.last ? find_chat(other_user).messages.last.content  : ''%></p>
+                  </div>
+                </div>
+              </div>
+              <% end %>
+              <% end %>
+            <% end %>
+          <% end %>
+          </div>
+        </div>
+
+        <div class="mesgs">
+          <div class="msg_history">
+          <% if @chat.messages.any? %>
+          <div id="messages">
+            <%= render partial: 'messages/message', collection: @chat.messages.order(id: :asc)%>
+          </div>
+        <%else%>
+          <div id="messages">
+          </div>
+        <%end%>
+            
+          </div>
+          <div class="type_msg">
+            <div class="input_msg_write">
+                <%= render partial: 'messages/message_form', locals: {message: @message, chat: @chat}%>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+<script>
+  createMessageChannel(); 
+  messageForm();
+  $('.msg_history').stop ().animate ({
+    scrollTop: $('.msg_history')[0].scrollHeight
+  });
+
+</script>
