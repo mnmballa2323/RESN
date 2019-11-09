@@ -1,32 +1,13 @@
 
-
-
-
-<section class="rent_banner">
-<div class="container">
-  <div class="agent-banner-text" >
-    <h5>RENT</h5>
-
-  </div>
-  <div class="banner-input" style="margin-top">
-  <div class="listing-sort listing-sort--main-listing" style="width: 50%;float: left; border-radius: 6px; border: 2px solid white; background: transparent; padding: 0px;">
-  <input type="submit" value="" class="main-listing__form-field agent-submit" style="width: 10% ;float:right" id="hit_rent" onClick="clickButton();">   
-  <input type="text" id="search_rent" class="main-listing__form-field " placeholder="Search For Rent..." style="width: 100% ;float:right; background: transparent; color: white!;">  
-  <div class="listing-sort__inner" style="float:left;margin: 0px; width: 25%; padding: 0px;">
-    <p class="listing-sort__sort">
+  <div class="main-listing__main" style="width:100%;float: right;margin-top:60px">
+    <div class="container">
+      <div class="row">
+      
+        <%= render 'partial/rental_property'%> 
      
-    </p><!-- .listing-sort__sort -->
-  </div><!-- .listing-sort__inner -->
-</div><!-- .listing-sort -->
-
-  </div>
+      </div><!-- row -->
+    </div><!-- .container -->
+  </div><!-- .main-listing__main -->
   
-
-</div>
-</section>
-
-<script>
-function clickButton (){
-  window.location.href = '/rent/search';
- }
-</script>
+  <%= render 'partial/news_letter'%>
+</section><!-- .main-listing -->
