@@ -111,4 +111,9 @@ class PagesController < ApplicationController
     
   end
 
+  def art 
+  end
+  
+  def furniture
+  end
 end

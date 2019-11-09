@@ -44,6 +44,8 @@ Rails.application.routes.draw do
   post "profiles/add_friend" => "profiles#add_friend"
   post "profiles/remove_friend" => "profiles#remove_friend"
   get "/inbox" => "profiles#messages"
+  get "art" => "pages#art"
+  get "furniture" => "pages#furniture"
 
   resources :messages, only:[:create]
 
