@@ -1,11 +1,10 @@
-<div class="row" style="padding:140px 0;">
-  <div id="user-account-form" style="padding-bottom: 40px; ">
-    <div class="rounded-content-frame__header">
-      Have an account?
-      <%= link_to("Log in",session_path(resource_name),:class=>"bold js-switch-to-login") %>
-    </div>
+
+<div class="login-background">
+<div class="row" style="padding:115px 0;">
+  <div id="user-account-form" style="padding-bottom: 40px; background-color: #EC4836;">
+   
     <div class="rounded-content-frame__content current" id="signup">
-      <h2 class="title">
+      <h2 class="title" style="color: white; text-align: center">
         Sign up
       </h2>
     </div>
@@ -29,10 +28,16 @@
             <%= f.label :password_confirmation,:class=>"offscreen"  %>
             <%= f.password_field :password_confirmation, autocomplete: "off",:placeholder=>"Password Confirmation",:required=>true %>
           </li>
-
+          <ol>
+          <li class="mb3 relative">
+          Have an account?
+          <%= link_to("Log in",session_path(resource_name),:class=>"bold js-switch-to-login", style: "color: white;") %>
+          <li>
+        </ol>
           <li class="m0">
             <br>
-            <%= f.submit "Sign up!",:class=>"btn btn--green btn--block submit" %>
+            <%= f.submit "Sign up!",:class=>"btn btn--block submit" ,  style: " background: #006aff;
+            color: white;"%>
           <li>
         </ol>
       </fieldset>
@@ -42,3 +47,5 @@
 </div>
 
 
+
+</div>

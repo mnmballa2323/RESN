@@ -1,122 +1,18 @@
-<section class="agents-with-info">
-  <div class="container">
-    <ul class="ht-breadcrumbs ht-breadcrumbs--y-padding ht-breadcrumbs--b-border ht-breadcrumbs--b-margin">
-      <li class="ht-breadcrumbs__item"><a href="index.html" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Home</span></a></li>
-      <li class="ht-breadcrumbs__item"><a href="agents.html" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Agent</span></a></li>
-      <li class="ht-breadcrumbs__item"><span class="ht-breadcrumbs__page">Agent List Style</span></li>
-    </ul><!-- ht-breadcrumb -->
 
-    <div class="row">
-      <h2 class="section__title" style="width: 40%;float: left;">Select Agents</h2>
-       <%= render 'partial/agents_sort_tag' %>
-    </div>
-    
 
-    <div class="row">
-      <div class="col-lg-3 col-sm-6">
-        <div class="famous-agents__single">
-          <div class="famous-agents__header">
-            <%= image_tag 'uploads/michael-drucker.jpg', alt: 'Michael Drucker' %>
-            <ul class="famous-agents__social">
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i>
-              </a></li>
-            </ul><!-- .famous_agents__social -->
-          </div><!-- .famous-agents__header -->
-          <div class="famous-agents__content">
-            <h4 class="famous-agents__name"><%= link_to "Michael Drucker", single_agent_path %></h4>
-            <span class="famous-agents__position">President | Realand&reg;</span>
-            <ul class="famous-agents__contact">
-              <li class="famous-agents__phone"><i class="fa fa-phone fa-fw" aria-hidden="true"></i><a href="tel:+3104326507">(310) 432 6507</a></li>
-              <li class="famous-agents__email"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i><a href="mailto:michael-druc@domain.com">Michael-druc@domain.com</a></li>
-            </ul><!-- .famous-agents__contact -->
-          </div><!-- .famous-agents__content -->
-        </div><!-- .famous-agents__single -->
-      </div><!-- .col -->
 
-      <div class="col-lg-3 col-sm-6">
-        <div class="famous-agents__single">
-          <div class="famous-agents__header">
-            <%= image_tag 'uploads/tristina_avelon.png', alt: 'Tristina Avelon' %>
-            <ul class="famous-agents__social">
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i>
-              </a></li>
-            </ul><!-- .famous_agents__social -->
-          </div><!-- .famous-agents__header -->
-          <div class="famous-agents__content">
-            <h4 class="famous-agents__name"><%= link_to "Tristina Avelon", single_agent_path %></h4>
-            <span class="famous-agents__position">President | Realand&reg;</span>
-            <ul class="famous-agents__contact">
-              <li class="famous-agents__phone"><i class="fa fa-phone fa-fw" aria-hidden="true"></i><a href="tel:+3104326507">(310) 432 6507</a></li>
-              <li class="famous-agents__email"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i><a href="mailto:michael-druc@domain.com">Michael-druc@domain.com</a></li>
-            </ul><!-- .famous-agents__contact -->
-          </div><!-- .famous-agents__content -->
-        </div><!-- .famous-agents__single -->
-      </div><!-- .col -->
 
-      <div class="col-lg-3 col-sm-6">
-        <div class="famous-agents__single">
-          <div class="famous-agents__header">
-            <%= image_tag 'uploads/donal_lucian.jpg', alt: 'Donal Lucian' %>
-            <ul class="famous-agents__social">
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i>
-              </a></li>
-            </ul><!-- .famous_agents__social -->
-          </div><!-- .famous-agents__header -->
-          <div class="famous-agents__content">
-            <h4 class="famous-agents__name"><%= link_to "Donal Lucian", single_agent_path %></h4>
-            <span class="famous-agents__position">President | Realand&reg;</span>
-            <ul class="famous-agents__contact">
-              <li class="famous-agents__phone"><i class="fa fa-phone fa-fw" aria-hidden="true"></i><a href="tel:+3104326507">(310) 432 6507</a></li>
-              <li class="famous-agents__email"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i><a href="mailto:michael-druc@domain.com">Michael-druc@domain.com</a></li>
-            </ul><!-- .famous-agents__contact -->
-          </div><!-- .famous-agents__content -->
-        </div><!-- .famous-agents__single -->
-      </div><!-- .col -->
+<section class="agent_banner">
+<div class="container">
+  <div class="agent-banner-text">
+    <h5>Find An Realtor</h5>
 
-      <div class="col-lg-3 col-sm-6">
-        <div class="famous-agents__single">
-          <div class="famous-agents__header">
-            <%= image_tag 'uploads/cherry_whiston.jpg', alt: 'Cherry Whiston' %>
-            <ul class="famous-agents__social">
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a></li>
-              <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i>
-              </a></li>
-            </ul><!-- .famous_agents__social -->
-          </div><!-- .famous-agents__header -->
-          <div class="famous-agents__content">
-            <h4 class="famous-agents__name"><%= link_to "Cherry Whiston", single_agent_path %></h4>
-            <span class="famous-agents__position">President | Realand&reg;</span>
-            <ul class="famous-agents__contact">
-              <li class="famous-agents__phone"><i class="fa fa-phone fa-fw" aria-hidden="true"></i><a href="tel:+3104326507">(310) 432 6507</a></li>
-              <li class="famous-agents__email"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i><a href="mailto:michael-druc@domain.com">Michael-druc@domain.com</a></li>
-            </ul><!-- .famous-agents__contact -->
-          </div><!-- .famous-agents__content -->
-        </div><!-- .famous-agents__single -->
-      </div><!-- .col -->
-    </div><!-- .row -->
-  </div><!-- .container -->
-</section><!-- agents-with-info -->
-<%= render 'partial/news_letter_agent'%>
+  </div>
+  <div class="banner-input">
+  <%= render 'partial/agents_sort_tag' %>
+
+  </div>
+
+</div>
+</section>
+

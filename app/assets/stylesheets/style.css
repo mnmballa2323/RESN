@@ -2810,7 +2810,7 @@ textarea {
 }
 .main-listing__form-field::placeholder {
   font-size: 13px;
-  color: #666666;
+  color: #eeeeee;
 }
 .main-listing__form-field .dk-selected {
   border-color: #eeeeee;
@@ -4477,11 +4477,10 @@ textarea {
 }
 @media only screen and (min-width: 768px) {
   .listing-sort__field {
-    width: 210px;
+    width: 150px;
   }
 }
 .listing-sort__field .dk-selected {
-  padding: 6px 15px;
   font-size: 13px;
   background-color: #eeeeee;
 }
@@ -5677,14 +5676,14 @@ div.similar-home:last-of-type {
 }
 .setting:hover .setting__icon,
 .setting--current .setting__icon {
-  color: #1fc341;
+  color: #EC4836;
 }
 .setting__link {
   color: #333333;
 }
 .setting:hover .setting__link,
 .setting--current .setting__link {
-  color: #1fc341;
+  color: #EC4836;
 }
 .manage-list__header {
   display: flex;
