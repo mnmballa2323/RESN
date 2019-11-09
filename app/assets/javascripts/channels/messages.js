@@ -19,7 +19,7 @@ function createMessageChannel() {
       document.querySelector('.msg_history1').innerHTML += (`<div class="bubble me">
       ${data.message}
     </div>`)
-      ): (document.querySelector('.msg_history1').innerHTML += (`<div class="bubble me">
+      ): (document.querySelector('.msg_history1').innerHTML += (`<div class="bubble you">
       ${data.message}
     </div>`));
   },
