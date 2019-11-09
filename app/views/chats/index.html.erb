@@ -1,78 +1,37 @@
 
 
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="messaging">
-      <div class="inbox_msg">
-        <div class="inbox_people">
-          <div class="headind_srch">
-            <div class="recent_heading">
-              <h4>Conversations</h4>
+
+<div class="body-1">
+
+<div class="wrapper1">
+    <div class="container1">
+        <div class="left">
+            <div class="top">
+                <input type="text" placeholder="Search" />
+                <a href="javascript:;" class="search"></a>
             </div>
-          </div>
-          <div class="inbox_chat">
-
-          <% if @existing_chats_users %>
-            <% @existing_chats_users.each do |other_user| %>
-              <% if other_user != current_user %>
-
-              <%= link_to(chats_path(current_user, :other_user => other_user.id), method: :post) do %>
-                <div class="chat_list active_chat">
-                <div class="chat_people">
-                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                  <div class="chat_ib">
-                    <h5><%= other_user.profile[0].first_name %> <span class="chat_date"></span></h5>
-                    <p><%= find_chat(other_user).messages.last ? find_chat(other_user).messages.last.content  : ''%></p>
-                  </div>
-                </div>
-              </div>
+            <ul class="people">
+              <% if @existing_chats_users %>
+                <% @existing_chats_users.each do |other_user| %>
+                  <% if other_user != current_user %>
+                    <%= link_to(chats_path(current_user, :other_user => other_user.id), method: :post) do %>
+                      <li class="person" data-chat="person1">
+                          <img src="https://ptetutorials.com/images/user-profile.png" alt="" />
+                          <span class="name"><%= other_user.profile[0].first_name %></span>
+                          <span class="time"><%= find_chat(other_user).messages.last ? find_chat(other_user).messages.last.created_at.strftime("%I:%M%p")  : ''%></span>
+                          <span class="preview"><%= find_chat(other_user).messages.last ? find_chat(other_user).messages.last.content  : ''%></span>
+                      </li>
+                    <% end %>
+                  <% end %>
+                <% end %>
               <% end %>
-
-             
-              <% end %>
-            <% end %>
-          <% end %>
-
-
-            
-          </div>
+            </ul>
         </div>
-
-        <div class="mesgs">
-        
-          <div class="msg_history">
-                <h2>Select conversation<h2>
-          </div>
+        <div class="right">
+            <div class="top"><span>No Chat Selected - <span class="name"> SELECT CHAT TO CONTINUE</span></span></div>
+          
         </div>
-      </div>
-      </div>
-
-
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<ul>
- 
-</ul>
-
-All Users:
-<ul>
-  <% User.all.each do |other_user| %>
-   <% if other_user != current_user %>
-     <li>
-       <%= link_to(chats_path( :other_user => other_user.id), method: :post) do %>
-       <%= other_user.id %>
-       <% end %>
-     </li>
-    <% end %>
-  <% end %>
-</ul>
+    </div>
+</div>
+</div>

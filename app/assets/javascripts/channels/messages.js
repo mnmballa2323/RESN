@@ -10,27 +10,18 @@ function createMessageChannel() {
         },
         renderMessage: function(data) {
           const id = parseInt($("#myid").text());
-          $('.msg_history').stop ().animate ({
-            scrollTop: $('.msg_history')[0].scrollHeight
+          $('.msg_history1').stop ().animate ({
+            scrollTop: $('.msg_history1')[0].scrollHeight
           });
+          $(".write_msg").val("")
+
     return id == data.user ? ( 
-      `<div class="outgoing_msg">
-      <div class="sent_msg">
-        <p>  ${ data.message }</p>
-        <span class="time_date"></span> 
-      </div>
-    </div>` 
-      ): (
-        `<div class="incoming_msg">
-        <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p> ${ data.message }</p>
-            <span class="time_date"></span>
-          </div>
-        </div>
-      </div>
-        `);
+      document.querySelector('.msg_history1').innerHTML += (`<div class="bubble me">
+      ${data.message}
+    </div>`)
+      ): (document.querySelector('.msg_history1').innerHTML += (`<div class="bubble me">
+      ${data.message}
+    </div>`));
   },
       });
 return App.messages;
