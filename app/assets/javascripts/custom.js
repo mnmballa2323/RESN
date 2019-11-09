@@ -3,6 +3,8 @@ var ww = $(window).width();
 $(document).ready(function () {
   'use strict';
 
+ 
+  
   $(".account").click(function()
 {
   event.preventDefault();
