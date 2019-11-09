@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :rental_lists
   mount ActionCable.server => '/cable'
   
+  resources :services
   resources :notifications
   resources :profiles
   resources :properties
@@ -53,5 +54,4 @@ Rails.application.routes.draw do
   get "/cookies-policy" => "pages#cookies_policy"
 
   resources :messages, only:[:create]
-
 end
