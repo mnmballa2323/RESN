@@ -18,7 +18,7 @@
                     <%= link_to(chats_path(current_user, :other_user => other_user.id), method: :post) do %>
                       <li class="person" data-chat="person1">
                           <img src="https://ptetutorials.com/images/user-profile.png" alt="" />
-                          <span class="name"><%= other_user.profile[0].first_name %></span>
+                          <span class="name"><%= other_user.profile[0].first_name %>  <%= other_user.profile[0].last_name %></span>
                           <span class="time"><%= find_chat(other_user).messages.last ? find_chat(other_user).messages.last.created_at.strftime("%I:%M%p")  : ''%></span>
                           <span class="preview"><%= find_chat(other_user).messages.last ? find_chat(other_user).messages.last.content  : ''%></span>
                       </li>

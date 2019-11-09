@@ -22,7 +22,7 @@
                       <li class="<%= (other_user.id == @other_user.id ) ? 'person active' : 'person' %>"
                        data-chat="person1">
                           <img src="https://ptetutorials.com/images/user-profile.png" alt="" />
-                          <span class="name"><%= other_user.profile[0].first_name %></span>
+                          <span class="name"><%= other_user.profile[0].first_name %>  <%= other_user.profile[0].last_name %></span>
                           <span class="time"><%= find_chat(other_user).messages.last ? find_chat(other_user).messages.last.created_at.strftime("%I:%M%p")  : ''%></span>
                           <span class="preview"><%= find_chat(other_user).messages.last ? find_chat(other_user).messages.last.content  : ''%></span>
                       </li>
