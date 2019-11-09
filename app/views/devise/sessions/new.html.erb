@@ -1,11 +1,8 @@
-
-<div class="login-background">
-
-<div class="row" style="padding:150px 0;">
-  <div id="user-account-form" style="background-color: #EC4836;">
+<div class="row" style="padding:140px 0;">
+  <div id="user-account-form">
     <div class="rounded-content-frame__content current" id="login">
-      <h2 class="title" style="color: white; text-align: center">
-        Sign in
+      <h2 class="title">
+        Login
       </h2>
     </div>
     <div class="mb3">
@@ -23,26 +20,23 @@
               <div class="relative">
                 <%= f.password_field :password, autocomplete: "off",:placeholder=>"Password",:required=>true %>
               </div>
-              <%= link_to "Forgot your password?", new_password_path(resource_name),:class=>"forgot-password-link",  style: "color: white;" %>
+              <%= link_to "Forgot your password?", new_password_path(resource_name),:class=>"forgot-password-link" %>
             <li>
           </ol>
 
           <ol>
             <li class="m0">
-              <%= f.submit "Sign in",:class=>"btn  btn--block submit ",  style: " background: #006aff;
-              color: white;"%>
+              <%= f.submit "Log me in!",:class=>"btn btn--green btn--block submit" %>
             <li>
           </ol>
         </fieldset>
       <% end %>
     </div>
     <div class="rounded-content-frame__footer">
-      <%= link_to("Sign Up",new_user_registration_path,:class=>"bold js-switch-to-login", style: "color: white;") %>
+      <%= link_to("Sign Up",new_user_registration_path,:class=>"bold js-switch-to-login") %>
     </div>
     
   </div>
 </div>
 
 
-
-</div>
