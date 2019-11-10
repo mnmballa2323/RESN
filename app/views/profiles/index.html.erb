@@ -49,40 +49,34 @@
       </div><!-- .col -->
 
       <div class="col-md-8" style=" margin-left 1rem">
-      <div class="_1ekkhy94">Hi, I’m <%= @profile.first_name   %> <%= @profile.last_name   %></div>
-      <br/>
-      <br/>
-      <h6 class="bookmarked-listing__headline">Basic Informataion</h6>
-    <hr/>
-      <div class="col-md-12 " style="margin: 1rem;">
-      
-      <i class="ion-android-microphone">      <%= @profile.ph_no%></i>
-      <br/>
-
-      <br/>
-      <br/>
-
-      <i class="ion-social-facebook">     <%= @profile.facebook_add %></i>
-      <br/>
-      <br/>
-      <br/>
-
-      <i class="ion-social-twitch
-
-      ">      <%= @profile.twitter_add %></i>
-      <br/>
-      <br/>
-      <br/>
-
-      <i class="ion-social-linkedin
-
-      ">      <%= @profile.linkedin_add %></i>
-      <br/>
-      <br/>
-      <br/>
+      <div class="_1ekkhy94"><%= @profile.first_name   %> <%= @profile.last_name   %></div>
       <hr/>
-      <h3 class="bookmarked-listing__headline">About me</h3>
-      <p><%= @profile.about_me %></p>
+      <section class="profile-info" style="margin-top: -22px;">
+      <h2>ABOUT</h2>
+      <p>
+      <%= @profile.about_me   %>
+      </p>
+      <hr/>
+      <h2>Contact</h2>
+      <aside class="social-media-icons">
+        <a href="https://<%= @profile.twitter_add   %>" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+        <a href="https://<%= @profile.facebook_add   %>" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+        <a href="https://<%= @profile.linkedin_add   %>" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+        </a>
+        <a href="tel:<%= @profile.ph_no   %>" target="_blank">
+                        <i class="fa fa-phone-square"></i>
+                    </a>
+      </aside>
+    </section>
+  <section class="statistics">
+
+  </section>
 
       </div><!-- .col -->
       

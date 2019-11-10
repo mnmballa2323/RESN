@@ -75,7 +75,7 @@ before_action :authenticate_user!
     @new_friend =  current_user.profile[0].friend_lists.new(friend_id: id)
     respond_to do |format|
       if @new_friend.save
-        format.html { redirect_to find_friend_path, notice: 'Profile was successfully updated.' }
+        format.html { redirect_to profile_path(id: id), notice: 'Profile was successfully updated.' }
       else
         format.json { render json: @profile.errors, status: :unprocessable_entity }        
       end
@@ -88,7 +88,7 @@ before_action :authenticate_user!
     @friend = FriendList.where(friend_id: id)
     @friend.destroy_all
     respond_to do |format|
-      format.html { redirect_to find_friend_path, notice: 'Remove from the list.' }
+      format.html { redirect_to profile_path(id: id), notice: 'Remove from the list.' }
       format.json { head :no_content }
     end
   end
