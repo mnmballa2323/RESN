@@ -5,8 +5,8 @@ class CreatePackages < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.text :description, null: false
       t.integer :delivery_time, null: false
-      t.integer :revisions, null: false, default: 1
-      t.decimal :price, null: false, precision: 8, scale: 2
+      t.integer :revisions, null: false
+      t.decimal :price, null: false
       t.belongs_to :service
     
       t.timestamps

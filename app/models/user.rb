@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :profile
-  has_many :services
+  has_many :services, dependent: :destroy
        
-         has_many :messages
+  has_many :messages
   has_many :subscriptions
   has_many :chats, through: :subscriptions
   def existing_chats_users

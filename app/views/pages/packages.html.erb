@@ -15,7 +15,7 @@
   <div class="listing-sort__inner" style="float:left;margin: 0px; width: 25%; padding: 0px;">
     <p class="listing-sort__sort">
       <select name="sort-type" id="sort-type" class="ht-field listing-sort__field" style="width: 138px; padding: 0px" >
-      <option value="ALL">Find Service</option>
+        <option value="ALL">Find Service</option>
         <option value="Agent type1">Assembly</option>
         <option value="Agent type1">Carpet Cleaning</option>
         <option value="Agent type1">Electrical</option>
@@ -44,5 +44,29 @@
   
 
 </div>
+</section>
+
+<section style="margin-top: 50px">
+  <h2 style="margin-left: 15px; padding-bottom: 30px; font-size: 24px;">Recently viewed & more</h2>
+  <% @services.each do |service| %>
+    <%= render 'services/service_card', :f => service %>
+  <% end %>
+</section>
+
+<section class="jumbotron"style="margin-top: 50px">
+  <h2 style="margin-left: 15px; padding-bottom: 30px; font-size: 24px;">Pro SEM services
+  </h2>
+  <% @services.each do |service| %>
+    <%= render 'services/service_card', :f => service %>
+  <% end %>
+</section>
+
+
+<section style="margin-top: 50px">
+  <h2 style="margin-left: 15px; padding-bottom: 30px; font-size: 24px;">Similar to services you've viewed
+  </h2>
+  <% @services.each do |service| %>
+    <%= render 'services/service_card', :f => service %>
+  <% end %>
 </section>
 

@@ -8,6 +8,7 @@ class CreateServices < ActiveRecord::Migration[5.2]
       t.text :description, null: false
       t.string :tags, array: true
       t.boolean :published, null: false, default: false
+      t.belongs_to :user
       
       # add tags in tags and tagging
       # add belongs_to in package

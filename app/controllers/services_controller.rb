@@ -27,7 +27,8 @@ class ServicesController < ApplicationController
   # POST /services
   # POST /services.json
   def create
-    @service = Service.new(service_params)
+    @service = current_user.services.new(service_params)
+    @service.tags = service_params['tags'].split
 
     respond_to do |format|
       if @service.save
@@ -67,7 +68,7 @@ class ServicesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_service
-      @service = Service.find(params[:id])
+      @service = current_user.services.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

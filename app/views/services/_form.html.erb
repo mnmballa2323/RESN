@@ -15,7 +15,7 @@
           <h3 class="submit-property__headline">Basic Information</h3>
           <div class="submit-property__group">
               <label for="title" class="submit-property__label">Service Title *</label>
-              <%= form.text_field :title, class: "submit-property__field", placeholder: placeholder="I will clean your home", :required => true%>
+              <%= form.text_field :title, class: "submit-property__field", placeholder: placeholder="I will clean your home", :required => true, :maxlength => 25, :size => 40%>
               
           </div>
 
@@ -23,7 +23,7 @@
               <div class="col-md-6">
                   <div class="submit-property__group">
                       <label for="property-type" class="submit-property__label">Service Category *</label>
-                      <%= form.select(:category, options_for_select([["House", "house"], ["Appertment", "appertment"], ["Commercial", "commercial"]], :selected => form.object.category), {include_blank: false}, { :class => 'ht-field' }) %>
+                      <%= form.select(:category, options_for_select(["Assembly", "Carpet Cleaning", "Electrical", "House Cleaning", "HVAC", "Handyman", "IT", "Junk Removal", "Lawn Care","Moving", "Painting", "Plumbing", "Staging", "Photography", "Videography", "Inspectors"], :selected => form.object.category), {include_blank: false}, { :class => 'ht-field' }) %>
                   </div>
               </div><!-- .col -->
 
@@ -31,7 +31,7 @@
                   <div class="submit-property__group">
                       <label for="property-price" class="submit-property__label">Tags *</label>
                       <%= form.text_field :tags, class: "submit-property__field", required: true%>
-                      <span class="submit-property__unit">USD</span>
+                      <span class="submit-property__unit"></span>
                   </div><!-- .submit-property__group -->
               </div><!-- .col -->
           </div><!-- .row -->
@@ -74,106 +74,48 @@
           </div><!-- .row -->
       </div><!-- .submit-property__block -->
 
-      <%= form.fields_for :packages do |p| %>
-          <div class="submit-property__block">
-            <h3 class="submit-property__headline">Packages</h3>
-            <div class="submit-property__group">
-                <label for="title" class="submit-property__label">Package Name *</label>
-                <%= p.text_field :name, class: "submit-property__field", placeholder: placeholder="Basic", :required => true%> 
-            </div>
+      <h3 class="submit-property__headline">Packages
+        <span id="package-toggle" class="toggle">
+          <span class="toggle-switch"></span>
+        </span>
+      </h3>
+      <div id="packages" class="block-ianctive">
+        <%= form.fields_for :packages do |package| %>
+          <%= render 'package_fields', :f => package %>
+        <% end %>
+        <div class='links'>
+          <%= link_to_add_association 'Add another', form, :packages %>
+        </div>
+      </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="submit-property__group">
-                        <label for="property-price" class="submit-property__label">Price *</label>
-                        <%= p.text_field :price, class: "submit-property__field", required: true%>
-                        <span class="submit-property__unit">USD</span>
-                    </div><!-- .submit-property__group -->
-                </div><!-- .col -->                
 
-                <div class="col-md-4">
-                  <div class="submit-property__group">
-                      <label for="property-type" class="submit-property__label">Revisions *</label>
-                      <%= p.select(:revisions, options_for_select((1..20), :selected => p.object.revisions), {include_blank: false}, { :class => 'ht-field' }) %>
-                  </div>
-                </div><!-- .col -->
+      <h3 class="submit-property__headline">Requirements
+        <span id="requirement-toggle" class="toggle">
+          <span class="toggle-switch"></span>
+        </span>
+      </h3>
+      <div id="requirements" class="block-ianctive">
+        <%= form.fields_for :requirements do |requirement| %>
+          <%= render 'requirement_fields', :f => requirement %>
+        <% end %>
+        <div class='links'>
+          <%= link_to_add_association 'Add another', form, :requirements %>
+        </div>
+      </div>
 
-                <div class="col-md-4">
-                  <div class="submit-property__group">
-                      <label for="property-type" class="submit-property__label">Delivery Time(Days) *</label>
-                      <%= p.select(:delivery_time, options_for_select((1..20), :selected => p.object.delivery_time), {include_blank: false}, { :class => 'ht-field' }) %>
-                  </div>
-                </div><!-- .col -->
-            </div><!-- .row -->
-
-            <div class="submit-property__group">
-                <label for="submit-property-wysiwyg" class="submit-property__label">Description *</label>
-                <%= p.text_area :description, id: "submit-property-wysiwyg", required: true %>
-            </div><!-- .submit-property__group -->
-        </div><!-- .submit-property__block -->
-      <% end %>
-
-      <%= form.fields_for :requirements do |r| %>
-          <div class="submit-property__block">
-            <h3 class="submit-property__headline">Requirements</h3>
-            <div class="submit-property__group">
-                <label for="submit-property-wysiwyg" class="submit-property__label">Description *</label>
-                <%= r.text_area :description, id: "submit-property-wysiwyg", required: true %>
-            </div><!-- .submit-property__group -->
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="submit-property__group">
-                        <label for="property-price" class="submit-property__label">Type *</label>
-                        <%= r.text_field :description, class: "submit-property__field", required: true%>
-                        <span class="submit-property__unit">Detailed description of the task</span>
-                    </div><!-- .submit-property__group -->
-                </div><!-- .col -->                
-
-                <div class="col-md-4">
-                    <div class="submit-property__group">
-                        <label for="property-price" class="submit-property__label">Description *</label>
-                        <%= r.text_field :requirement_type, class: "submit-property__field", required: true%>
-                        <span class="submit-property__unit">Detailed description of the task</span>
-                    </div><!-- .submit-property__group -->
-                </div><!-- .col -->                
-
-            </div><!-- .row -->
-
-            <div class="submit-property__group">
-                <label for="submit-property-wysiwyg" class="submit-property__label">Description *</label>
-                <%= r.text_area :is_mandatory, id: "submit-property-wysiwyg", required: true %>
-            </div><!-- .submit-property__group -->
-        </div><!-- .submit-property__block -->
-      <% end %>
-
-      <%= form.fields_for :faqs do |f| %>
-          <div class="submit-property__block">
-            <h3 class="submit-property__headline">FAQs</h3>
-            
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="submit-property__group">
-                        <label for="property-price" class="submit-property__label">Question *</label>
-                        <%= f.text_field :question, class: "submit-property__field", required: true%>
-                        <span class="submit-property__unit">Detailed description of the task</span>
-                    </div><!-- .submit-property__group -->
-                </div><!-- .col -->                              
-
-            </div><!-- .row -->
-
-            <div class="row">
-                <div class="col-md-6">
-                  <div class="submit-property__group">
-                      <label for="submit-property-wysiwyg" class="submit-property__label">Answer *</label>
-                      <%= f.text_area :answer, id: "submit-property-wysiwyg", required: true %>
-                  </div><!-- .submit-property__group -->
-                </div><!-- .col -->                              
-
-            </div><!-- .row -->
-        </div><!-- .submit-property__block -->
-      <% end %>
+      <h3 class="submit-property__headline">FAQs
+        <span id="faq-toggle" class="toggle">
+          <span class="toggle-switch"></span>
+        </span>
+      </h3>
+      <div id="faqs" class="block-ianctive">
+        <%= form.fields_for :faqs do |faq| %>
+          <%= render 'faq_fields', :f => faq %>
+        <% end %>
+        <div class='links'>
+          <%= link_to_add_association 'Add another', form, :faqs %>
+        </div>
+      </div>
 
       <button type="submit" class="submit-property__submit">Submit</button>
       <a href="<%= services_path %>" class="submit-property__submit" style="background-color: #1FC2E1;">Cancel</a>
