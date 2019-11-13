@@ -47,6 +47,10 @@ Rails.application.routes.draw do
   get "art" => "pages#art"
   get "furniture" => "pages#furniture"
 
+  get "/privacy-policy" => "pages#privacy_policy"
+  get "/term_of_use" => "pages#term_of_use"
+  get "/cookies-policy" => "pages#cookies_policy"
+
   resources :messages, only:[:create]
 
 end

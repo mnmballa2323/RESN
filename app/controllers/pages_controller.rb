@@ -116,4 +116,12 @@ class PagesController < ApplicationController
   
   def furniture
   end
+  def privacy_policy
+  end
+
+  def term_of_use
+  end
+  
+  def cookies_policy
+  end
 end
