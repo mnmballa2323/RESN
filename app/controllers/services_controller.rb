@@ -4,7 +4,19 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    @services = Service.all
+    if !params[:category].present? and !params[:title].present?
+      @services = Service.take(4)
+    else
+      if params[:category] != "Find Service" and params[:title].present?
+        @services = Service.where(category: params[:category], title: params[:title]).take(4)
+      elsif params[:category] == "Find Service" and params[:title].present?
+        @services = Service.where(title: params[:title]).take(4)
+      elsif params[:category] != "Find Service" and !params[:title].present?
+        @services = Service.where(category: params[:category]).take(4)
+      else
+        @services = Service.take(4)
+      end
+    end
   end
 
   # GET /services/1

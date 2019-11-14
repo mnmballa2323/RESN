@@ -41,7 +41,6 @@ class PagesController < ApplicationController
   end
 
   def packages
-    @services = Service.take(4)
   end
 
   def my_property
