@@ -1,0 +1,97 @@
+<%= form_with(model: rental_list, local: true) do |form| %>
+  <% if rental_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rental_list.errors.count, "error") %> prohibited this rental_list from being saved:</h2>
+
+      <ul>
+      <% rental_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :room_type %>
+    <%= form.text_field :room_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :person_capicty %>
+    <%= form.text_field :person_capicty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :propert_type %>
+    <%= form.text_field :propert_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :property_type_cat %>
+    <%= form.text_field :property_type_cat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_dedicated %>
+    <%= form.check_box :is_dedicated %>
+  </div>
+
+  <div class="field">
+    <%= form.label :guest_no_acc %>
+    <%= form.text_field :guest_no_acc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beedrooms_no %>
+    <%= form.text_field :beedrooms_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bathrooms_no %>
+    <%= form.text_field :bathrooms_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postal_code %>
+    <%= form.text_field :postal_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descritption %>
+    <%= form.text_field :descritption %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

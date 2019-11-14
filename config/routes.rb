@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rental_lists
   mount ActionCable.server => '/cable'
   
   resources :notifications

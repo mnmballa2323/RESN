@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rental Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Room type</th>
+      <th>Person capicty</th>
+      <th>Location</th>
+      <th>Propert type</th>
+      <th>Property type cat</th>
+      <th>Is dedicated</th>
+      <th>Guest no acc</th>
+      <th>Beedrooms no</th>
+      <th>Bathrooms no</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Postal code</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Descritption</th>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rental_lists.each do |rental_list| %>
+      <tr>
+        <td><%= rental_list.room_type %></td>
+        <td><%= rental_list.person_capicty %></td>
+        <td><%= rental_list.location %></td>
+        <td><%= rental_list.propert_type %></td>
+        <td><%= rental_list.property_type_cat %></td>
+        <td><%= rental_list.is_dedicated %></td>
+        <td><%= rental_list.guest_no_acc %></td>
+        <td><%= rental_list.beedrooms_no %></td>
+        <td><%= rental_list.bathrooms_no %></td>
+        <td><%= rental_list.address %></td>
+        <td><%= rental_list.city %></td>
+        <td><%= rental_list.postal_code %></td>
+        <td><%= rental_list.state %></td>
+        <td><%= rental_list.country %></td>
+        <td><%= rental_list.descritption %></td>
+        <td><%= rental_list.title %></td>
+        <td><%= link_to 'Show', rental_list %></td>
+        <td><%= link_to 'Edit', edit_rental_list_path(rental_list) %></td>
+        <td><%= link_to 'Destroy', rental_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rental List', new_rental_list_path %>
