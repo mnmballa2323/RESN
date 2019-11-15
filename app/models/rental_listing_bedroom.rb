@@ -1,0 +1,2 @@
+class RentalListingBedroom < ApplicationRecord
+end

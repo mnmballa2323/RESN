@@ -1,0 +1,2 @@
+class RentalListingAmenityInfo < ApplicationRecord
+end

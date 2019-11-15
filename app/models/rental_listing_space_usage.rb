@@ -1,0 +1,2 @@
+class RentalListingSpaceUsage < ApplicationRecord
+end
