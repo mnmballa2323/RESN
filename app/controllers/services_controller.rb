@@ -26,10 +26,14 @@ class ServicesController < ApplicationController
 
   # GET /services/new
   def new
-    @service = Service.new
-    @service.packages.build
-    @service.requirements.build
-    @service.faqs.build
+    if current_user.profile.present?
+      @service = Service.new
+      @service.packages.build
+      @service.requirements.build
+      @service.faqs.build
+    else
+      redirect_to new_profile_url
+    end
   end
 
   # GET /services/1/edit
@@ -44,7 +48,8 @@ class ServicesController < ApplicationController
 
     respond_to do |format|
       if @service.save
-        format.html { redirect_to @service, notice: 'Service was successfully created.' }
+        # format.html { redirect_to @service, notice: 'Service was successfully created.' }
+        format.html { redirect_to action: "index", notice: 'Service was successfully created.' }
         format.json { render :show, status: :created, location: @service }
       else
         format.html { render :new }
