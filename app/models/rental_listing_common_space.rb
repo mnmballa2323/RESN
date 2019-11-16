@@ -1,2 +1,3 @@
-class RentalListingCommonSpace < ApplicationRecord
+class RentalListingCommonSpace < ActiveRecord::Base
+  belongs_to :rental_list
 end

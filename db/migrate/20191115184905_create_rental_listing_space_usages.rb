@@ -9,6 +9,7 @@ class CreateRentalListingSpaceUsages < ActiveRecord::Migration[5.2]
       t.boolean :pool
       t.boolean :hot_tub
       t.boolean :elevator
+      t.references :rental_list, foreign_key: true
 
       t.timestamps
     end

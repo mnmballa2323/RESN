@@ -1,2 +1,0 @@
-class RentalListingMedium < ApplicationRecord
-end

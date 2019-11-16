@@ -16,5 +16,5 @@ class User < ApplicationRecord
     existing_chat_users.uniq
   end
 
-  
+  has_many :rental_lists
 end

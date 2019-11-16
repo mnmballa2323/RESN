@@ -1,10 +1,11 @@
 class RentalListsController < ApplicationController
   before_action :set_rental_list, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /rental_lists
   # GET /rental_lists.json
   def index
-    @rental_lists = RentalList.all
+    @rental_lists = current_user.rental_lists.all
   end
 
   # GET /rental_lists/1
@@ -14,7 +15,7 @@ class RentalListsController < ApplicationController
 
   # GET /rental_lists/new
   def new
-    @rental_list = RentalList.new
+    @rental_list = current_user.rental_lists.new
   end
 
   # GET /rental_lists/1/edit
@@ -24,7 +25,7 @@ class RentalListsController < ApplicationController
   # POST /rental_lists
   # POST /rental_lists.json
   def create
-    @rental_list = RentalList.new(rental_list_params)
+    @rental_list = current_user.rental_lists.new(rental_list_params)
 
     respond_to do |format|
       if @rental_list.save
@@ -69,6 +70,6 @@ class RentalListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rental_list_params
-      params.require(:rental_list).permit(:room_type, :person_capicty, :location, :propert_type, :property_type_cat, :is_dedicated, :guest_no_acc, :beedrooms_no, :bathrooms_no, :address, :city, :postal_code, :state, :country, :descritption, :title)
+      params.require(:rental_list).permit(:room_type, :person_capicty, :location, :propert_type, :property_type_cat, :is_dedicated, :guest_no_acc, :beedrooms_guest_use, :bathrooms_guest_no, :address, :city, :postal_code, :state, :country, :descritption, :title)
     end
 end

@@ -14,6 +14,7 @@ class CreateRentalListingAmenityInfos < ActiveRecord::Migration[5.2]
       t.boolean :carbon_det
       t.boolean :smoke_det
       t.boolean :first_aid
+      t.references :rental_list, foreign_key: true
 
       t.timestamps
     end
