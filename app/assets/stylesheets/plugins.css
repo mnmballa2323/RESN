@@ -1504,7 +1504,7 @@ a.pswp__share--download:hover {
   z-index: 100; }
 
 .dk-option-selected {
-  background-color: #1fc341;
+  background-color: #ED4737;
   color: #fff; }
 
 .dk-select-options-highlight .dk-option-selected {
@@ -1515,7 +1515,7 @@ a.pswp__share--download:hover {
   padding: 10px 15px; }
 
 .dk-select-options .dk-option-highlight {
-  background-color: #1fc341;
+  background-color: #ED4737;
   color: #fff; }
 
 .dk-select-options .dk-option-disabled {
@@ -1563,23 +1563,23 @@ a.pswp__share--download:hover {
 .dk-select-open-up .dk-selected {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-color: #1fc341; }
+  border-color: #ED4737; }
 
 .dk-select-open-down .dk-selected {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  border-color: #1fc341; }
+  border-color: #ED4737; }
 
 .dk-select-open-up .dk-selected:before,
 .dk-select-open-down .dk-selected:before {
   border-width: 0 0.35em 0.35em;
-  border-bottom-color: #1fc341; }
+  border-bottom-color: #ED4737; }
 
 .dk-select-open-up .dk-select-options,
 .dk-select-open-down .dk-select-options,
 .dk-select-multi:focus .dk-select-options {
   display: block;
-  border-color: #1fc341; }
+  border-color: #ED4737; }
 
 .dk-select-multi:hover,
 .dk-select-multi:focus {
@@ -1588,10 +1588,10 @@ a.pswp__share--download:hover {
 .dk-selected:hover,
 .dk-selected:focus {
   outline: none;
-  border-color: #1fc341; }
+  border-color: #ED4737; }
   .dk-selected:hover:before,
   .dk-selected:focus:before {
-    border-top-color: #1fc341; }
+    border-top-color: #ED4737; }
 
 .dk-select-disabled {
   opacity: 0.6;

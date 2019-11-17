@@ -5998,7 +5998,7 @@ div.similar-home:last-of-type {
 }
 .submit-property__checkbox:checked ~ .submit-property__feature:before {
   content: "\f14a";
-  color: #1fc341;
+  color: #ED4737;
 }
 .submit-property__checkbox:disabled ~ .submit-property__feature:before {
   content: "\f0c8";

@@ -29,7 +29,7 @@ class RentalListsController < ApplicationController
 
     respond_to do |format|
       if @rental_list.save
-        format.html { redirect_to @rental_list, notice: 'Rental list was successfully created.' }
+        format.html { redirect_to rental_lists_path, notice: 'Rental list was successfully created.' }
         format.json { render :show, status: :created, location: @rental_list }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class RentalListsController < ApplicationController
   def update
     respond_to do |format|
       if @rental_list.update(rental_list_params)
-        format.html { redirect_to @rental_list, notice: 'Rental list was successfully updated.' }
+        format.html { redirect_to rental_lists_path, notice: 'Rental list was successfully updated.' }
         format.json { render :show, status: :ok, location: @rental_list }
       else
         format.html { render :edit }
@@ -70,6 +70,6 @@ class RentalListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rental_list_params
-      params.require(:rental_list).permit(:room_type, :person_capicty, :location, :propert_type, :property_type_cat, :is_dedicated, :guest_no_acc, :beedrooms_guest_use, :bathrooms_guest_no, :address, :city, :postal_code, :state, :country, :descritption, :title)
+      params.require(:rental_list).permit(:room_type, :person_capicty, :location, :propert_type, :property_type_cat, :is_dedicated, :guest_no_acc, :beedrooms_guest_use, :bathrooms_guest_no, :address, :city, :postal_code, :state, :country, :description, :title, rental_listing_bedrooms_attributes: [:id, :room_type, :_destroy], rental_listing_common_spaces_attributes: [:id, :space_type, :_destroy], rental_listing_images_attributes: [:id, :url, :_destroy], rental_listing_space_usages_attributes:[:kitchen, :laundry_washer, :laundry_dryer, :parking, :gym, :pool, :hot_tub, :elevator], rental_listing_amenity_info_attributes: [:essentails, :air_conditioning, :heat, :hair_drryer, :closet, :iron, :tv, :breakfast, :wifi], rental_listing_space_usage_attributes: [:kitchen, :laundry_washer, :laundry_dryer, :parking, :gym, :pool])
     end
 end
