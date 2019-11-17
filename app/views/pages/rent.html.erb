@@ -25,6 +25,20 @@
 </div>
 </section>
 
+
+<section style="margin: 20px">
+<br/>
+  <h2 style="margin-left: 15px; padding-bottom: 30px; font-size: 24px; text-align: center”;">Rental Lists
+  </h2>
+  <hr/>
+  <% RentalList.all.each do |list| %>
+    <%= render 'rental_lists/rental_listing', f: list %>  
+  <% end %>
+</section>
+
+<hr/>
+
+
 <script>
 function clickButton (){
   window.location.href = '/rent/search';
