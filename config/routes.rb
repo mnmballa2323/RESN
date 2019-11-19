@@ -2,11 +2,13 @@ Rails.application.routes.draw do
   resources :rental_lists
   mount ActionCable.server => '/cable'
   
-  resources :services
   resources :notifications
   resources :profiles
   resources :properties
   devise_for :users
+  resources :user do
+    resources :services
+  end
   root 'home#index'
   resources :chats, only: [:index, :show, :create]
 
@@ -22,7 +24,7 @@ Rails.application.routes.draw do
   get 'my_profile' => 'pages#my_profile'
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
-  get 'packages' => 'pages#packages'
+  get 'services' => 'pages#services'
   get 'my_property' => 'pages#my_property'
   get 'coming_soon' => 'pages#coming_soon'
   get 'book_marked_listing' => 'pages#book_marked_listing'

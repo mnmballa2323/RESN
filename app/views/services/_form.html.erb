@@ -1,11 +1,11 @@
-<%= form_with(model: service, local: true) do |form| %>
+<%= form_with(model: [@user, @service], local: true) do |form| %>
   <div class="col-md-9">
-      <% if service.errors.any? %>
+      <% if @service.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(service.errors.count, "error") %> prohibited this service from being saved:</h2>
+          <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
 
           <ul>
-          <% service.errors.full_messages.each do |message| %>
+          <% @service.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
           </ul>
@@ -117,8 +117,7 @@
         </div>
       </div>
 
-      <button type="submit" class="submit-property__submit">Submit</button>
-      <a href="<%= services_path %>" class="submit-property__submit" style="background-color: #1FC2E1;">Cancel</a>
+      <button type="submit" class="submit-property__submit" style="background-color: #ED4737">Submit</button>
 
   </div>
 <% end %>
