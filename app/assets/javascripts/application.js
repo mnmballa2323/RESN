@@ -19,7 +19,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree ./channels
-//= require_tree .
-
 //= require jquery_ujs
 //= require nested_form_fields
+//= require cocoon
+//= require_tree .

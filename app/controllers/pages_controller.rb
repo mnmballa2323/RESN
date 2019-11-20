@@ -40,8 +40,20 @@ class PagesController < ApplicationController
     
   end
 
-  def packages
-    
+  def services
+    if !params[:category].present? and !params[:title].present?
+      @services = Service.take(4)
+    else
+      if params[:category] != "Find Service" and params[:title].present?
+        @services = Service.where(category: params[:category], title: params[:title]).take(4)
+      elsif params[:category] == "Find Service" and params[:title].present?
+        @services = Service.where(title: params[:title]).take(4)
+      elsif params[:category] != "Find Service" and !params[:title].present?
+        @services = Service.where(category: params[:category]).take(4)
+      else
+        @services = Service.take(4)
+      end
+    end
   end
 
   def my_property
@@ -113,7 +125,7 @@ class PagesController < ApplicationController
   end
 
   def list_new
-    
+    @user = current_user
   end
 
   def art 

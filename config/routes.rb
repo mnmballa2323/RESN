@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :profiles
   resources :properties
   devise_for :users
+  resources :user do
+    resources :services
+  end
   root 'home#index'
   resources :chats, only: [:index, :show, :create]
 
@@ -21,7 +24,7 @@ Rails.application.routes.draw do
   get 'my_profile' => 'pages#my_profile'
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
-  get 'packages' => 'pages#packages'
+  get 'services' => 'pages#services'
   get 'my_property' => 'pages#my_property'
   get 'coming_soon' => 'pages#coming_soon'
   get 'book_marked_listing' => 'pages#book_marked_listing'
@@ -53,5 +56,4 @@ Rails.application.routes.draw do
   get "/cookies-policy" => "pages#cookies_policy"
 
   resources :messages, only:[:create]
-
 end
