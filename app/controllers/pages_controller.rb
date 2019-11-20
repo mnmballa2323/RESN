@@ -77,7 +77,12 @@ class PagesController < ApplicationController
   end
 
   def rent
-    
+    if !params[:search].present?
+      @rental_lists =  RentalList.all
+    else
+      variable = params[:search]
+      @rental_lists =  RentalList.where("title like ?", "%#{variable}%")
+    end
   end
 
   def property_detail
