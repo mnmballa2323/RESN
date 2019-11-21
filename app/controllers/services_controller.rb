@@ -6,6 +6,7 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
+    @user = current_user
     @services = current_user.services
   end
 
@@ -16,6 +17,7 @@ class ServicesController < ApplicationController
 
   # GET /services/new
   def new
+    @user = current_user
     if current_user.profile.present?
       @service = @user.services.build
       @service.packages.build
@@ -28,11 +30,13 @@ class ServicesController < ApplicationController
 
   # GET /services/1/edit
   def edit
+    @user = current_user
   end
 
   # POST /services
   # POST /services.json
   def create
+    @user = current_user
     @service = current_user.services.new(service_params)
     @service.tags = service_params['tags'].split
 
@@ -51,6 +55,7 @@ class ServicesController < ApplicationController
   # PATCH/PUT /services/1
   # PATCH/PUT /services/1.json
   def update
+    @user = current_user
     respond_to do |format|
       if @service.update(service_params)
         format.html { redirect_to user_services_path(current_user), notice: 'Service was successfully updated.' }
