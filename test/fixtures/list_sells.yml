@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyString
+  unit_no: MyString
+  state: MyString
+  postal_code: MyString
+  title: MyString
+  price: MyString
+  virtual_tour_url: MyString
+  home_type: MyString
+  finished_suqare_area: MyString
+  lot_size: MyString
+  year_built: MyString
+  st_model_year: MyString
+  hoa_dues: MyString
+  basement_size: MyString
+  garage_size: MyString
+  description: MyString
+  website: MyString
+  my_views: MyString
+  contact_no: MyString
+  email: MyString
+
+two:
+  address: MyString
+  unit_no: MyString
+  state: MyString
+  postal_code: MyString
+  title: MyString
+  price: MyString
+  virtual_tour_url: MyString
+  home_type: MyString
+  finished_suqare_area: MyString
+  lot_size: MyString
+  year_built: MyString
+  st_model_year: MyString
+  hoa_dues: MyString
+  basement_size: MyString
+  garage_size: MyString
+  description: MyString
+  website: MyString
+  my_views: MyString
+  contact_no: MyString
+  email: MyString

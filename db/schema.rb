@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_17_143347) do
+ActiveRecord::Schema.define(version: 2019_11_22_183714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,84 @@ ActiveRecord::Schema.define(version: 2019_11_17_143347) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["profile_id"], name: "index_friend_lists_on_profile_id"
+  end
+
+  create_table "list_sale_utilities", force: :cascade do |t|
+    t.boolean "center"
+    t.boolean "solor"
+    t.boolean "wall"
+    t.boolean "none"
+    t.boolean "base_board"
+    t.boolean "radiant"
+    t.string "heat_pump"
+    t.boolean "other"
+    t.boolean "oil"
+    t.boolean "gas"
+    t.boolean "electric"
+    t.boolean "wood"
+    t.bigint "list_sell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_sell_id"], name: "index_list_sale_utilities_on_list_sell_id"
+  end
+
+  create_table "list_sell_common_spaces", force: :cascade do |t|
+    t.string "type"
+    t.bigint "list_sell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_sell_id"], name: "index_list_sell_common_spaces_on_list_sell_id"
+  end
+
+  create_table "list_sell_open_visits", force: :cascade do |t|
+    t.date "date"
+    t.string "start_time"
+    t.string "end_date"
+    t.bigint "list_sell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_sell_id"], name: "index_list_sell_open_visits_on_list_sell_id"
+  end
+
+  create_table "list_sell_others", force: :cascade do |t|
+    t.string "type"
+    t.bigint "list_sell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_sell_id"], name: "index_list_sell_others_on_list_sell_id"
+  end
+
+  create_table "list_sell_rooms", force: :cascade do |t|
+    t.string "type"
+    t.bigint "list_sell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_sell_id"], name: "index_list_sell_rooms_on_list_sell_id"
+  end
+
+  create_table "list_sells", force: :cascade do |t|
+    t.string "address"
+    t.string "unit_no"
+    t.string "state"
+    t.string "postal_code"
+    t.string "title"
+    t.string "price"
+    t.string "virtual_tour_url"
+    t.string "home_type"
+    t.string "finished_suqare_area"
+    t.string "lot_size"
+    t.string "year_built"
+    t.string "st_model_year"
+    t.string "hoa_dues"
+    t.string "basement_size"
+    t.string "garage_size"
+    t.string "description"
+    t.string "website"
+    t.string "my_views"
+    t.string "contact_no"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "messages", force: :cascade do |t|
@@ -259,6 +337,11 @@ ActiveRecord::Schema.define(version: 2019_11_17_143347) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "list_sale_utilities", "list_sells"
+  add_foreign_key "list_sell_common_spaces", "list_sells"
+  add_foreign_key "list_sell_open_visits", "list_sells"
+  add_foreign_key "list_sell_others", "list_sells"
+  add_foreign_key "list_sell_rooms", "list_sells"
   add_foreign_key "profiles", "users"
   add_foreign_key "rental_listing_amenity_infos", "rental_lists"
   add_foreign_key "rental_listing_bedrooms", "rental_lists"

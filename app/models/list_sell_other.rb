@@ -1,0 +1,2 @@
+class ListSellOther < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class ListSaleUtility < ApplicationRecord
+end

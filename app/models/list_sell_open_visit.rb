@@ -1,0 +1,2 @@
+class ListSellOpenVisit < ApplicationRecord
+end

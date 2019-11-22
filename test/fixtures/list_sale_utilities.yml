@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  center: false
+  solor: false
+  wall: false
+  none: false
+  base_board: false
+  radiant: false
+  heat_pump: MyString
+  other: false
+  oil: false
+  gas: false
+  electric: false
+  wood: false
+  other: false
+  none: false
+
+two:
+  center: false
+  solor: false
+  wall: false
+  none: false
+  base_board: false
+  radiant: false
+  heat_pump: MyString
+  other: false
+  oil: false
+  gas: false
+  electric: false
+  wood: false
+  other: false
+  none: false

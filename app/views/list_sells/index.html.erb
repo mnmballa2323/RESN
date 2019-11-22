@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>List Sells</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Unit no</th>
+      <th>State</th>
+      <th>Postal code</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Virtual tour url</th>
+      <th>Home type</th>
+      <th>Finished suqare area</th>
+      <th>Lot size</th>
+      <th>Year built</th>
+      <th>St model year</th>
+      <th>Hoa dues</th>
+      <th>Basement size</th>
+      <th>Garage size</th>
+      <th>Description</th>
+      <th>Website</th>
+      <th>My views</th>
+      <th>Contact no</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @list_sells.each do |list_sell| %>
+      <tr>
+        <td><%= list_sell.address %></td>
+        <td><%= list_sell.unit_no %></td>
+        <td><%= list_sell.state %></td>
+        <td><%= list_sell.postal_code %></td>
+        <td><%= list_sell.title %></td>
+        <td><%= list_sell.price %></td>
+        <td><%= list_sell.virtual_tour_url %></td>
+        <td><%= list_sell.home_type %></td>
+        <td><%= list_sell.finished_suqare_area %></td>
+        <td><%= list_sell.lot_size %></td>
+        <td><%= list_sell.year_built %></td>
+        <td><%= list_sell.st_model_year %></td>
+        <td><%= list_sell.hoa_dues %></td>
+        <td><%= list_sell.basement_size %></td>
+        <td><%= list_sell.garage_size %></td>
+        <td><%= list_sell.description %></td>
+        <td><%= list_sell.website %></td>
+        <td><%= list_sell.my_views %></td>
+        <td><%= list_sell.contact_no %></td>
+        <td><%= list_sell.email %></td>
+        <td><%= link_to 'Show', list_sell %></td>
+        <td><%= link_to 'Edit', edit_list_sell_path(list_sell) %></td>
+        <td><%= link_to 'Destroy', list_sell, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New List Sell', new_list_sell_path %>

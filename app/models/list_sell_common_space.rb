@@ -1,0 +1,2 @@
+class ListSellCommonSpace < ApplicationRecord
+end
