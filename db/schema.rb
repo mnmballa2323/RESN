@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_17_143347) do
+ActiveRecord::Schema.define(version: 2019_11_23_185428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,37 @@ ActiveRecord::Schema.define(version: 2019_11_17_143347) do
     t.index ["profile_id"], name: "index_friend_lists_on_profile_id"
   end
 
+  create_table "list_sells", force: :cascade do |t|
+    t.string "address"
+    t.string "unit"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "price"
+    t.string "virtual_tour_link"
+    t.string "home_type"
+    t.string "no_bed"
+    t.string "no_f_bath"
+    t.string "no_q_bath"
+    t.string "no_h_bath"
+    t.string "finished_sq"
+    t.string "lot_size"
+    t.string "year_built"
+    t.string "remodel_year"
+    t.string "hoa_dues"
+    t.string "basement_area"
+    t.string "garage_area"
+    t.string "description"
+    t.string "website"
+    t.string "my_views"
+    t.string "email"
+    t.string "ph_no"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_list_sells_on_user_id"
+  end
+
   create_table "messages", force: :cascade do |t|
     t.string "content"
     t.integer "user_id"
@@ -71,6 +102,39 @@ ActiveRecord::Schema.define(version: 2019_11_17_143347) do
     t.string "descrition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "other_details", force: :cascade do |t|
+    t.boolean "centerl"
+    t.boolean "solar"
+    t.boolean "wall"
+    t.boolean "refrigeration"
+    t.boolean "none"
+    t.boolean "baseboard"
+    t.boolean "radiant"
+    t.boolean "force_air"
+    t.boolean "heat_pump"
+    t.boolean "stove"
+    t.boolean "coal"
+    t.boolean "electric"
+    t.boolean "wood"
+    t.boolean "gas"
+    t.boolean "oil"
+    t.boolean "propane"
+    t.boolean "heat_none"
+    t.string "heating_other"
+    t.boolean "lawn"
+    t.boolean "deck"
+    t.boolean "dock"
+    t.boolean "pool"
+    t.boolean "garden"
+    t.boolean "water_front"
+    t.boolean "fence_yard"
+    t.string "a_other"
+    t.bigint "list_sell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_sell_id"], name: "index_other_details_on_list_sell_id"
   end
 
   create_table "packages", force: :cascade do |t|
@@ -125,6 +189,14 @@ ActiveRecord::Schema.define(version: 2019_11_17_143347) do
     t.string "exersie_room"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "rental_images", force: :cascade do |t|
+    t.string "url"
+    t.bigint "list_sell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_sell_id"], name: "index_rental_images_on_list_sell_id"
   end
 
   create_table "rental_listing_amenity_infos", force: :cascade do |t|
@@ -227,6 +299,60 @@ ActiveRecord::Schema.define(version: 2019_11_17_143347) do
     t.index ["service_id"], name: "index_requirements_on_service_id"
   end
 
+  create_table "room_details", force: :cascade do |t|
+    t.boolean "dish_washer"
+    t.boolean "rang_oven"
+    t.boolean "dryer"
+    t.boolean "refrigerator"
+    t.boolean "freezer"
+    t.boolean "trash_compactor"
+    t.boolean "garbage_disposal"
+    t.boolean "washer"
+    t.boolean "microwave"
+    t.string "basement_type"
+    t.string "floor_type"
+    t.string "room_type"
+    t.bigint "list_sell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_sell_id"], name: "index_room_details_on_list_sell_id"
+  end
+
+  create_table "sell_building_details", force: :cascade do |t|
+    t.boolean "gated_entry"
+    t.boolean "living_community"
+    t.boolean "sport_court"
+    t.boolean "transport"
+    t.boolean "door_man"
+    t.boolean "elevetor"
+    t.boolean "fitness"
+    t.string "styel"
+    t.boolean "brick"
+    t.boolean "cement"
+    t.boolean "metal"
+    t.boolean "shingle"
+    t.boolean "other"
+    t.boolean "stone"
+    t.string "floor_no"
+    t.string "no_unit"
+    t.string "no_stories"
+    t.string "no_parking"
+    t.bigint "list_sell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_sell_id"], name: "index_sell_building_details_on_list_sell_id"
+  end
+
+  create_table "sell_visit_times", force: :cascade do |t|
+    t.date "date"
+    t.string "start_time"
+    t.string "end_time"
+    t.bigint "list_sell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_sell_id"], name: "index_sell_visit_times_on_list_sell_id"
+  end
+
   create_table "services", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -259,11 +385,17 @@ ActiveRecord::Schema.define(version: 2019_11_17_143347) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "list_sells", "users"
+  add_foreign_key "other_details", "list_sells"
   add_foreign_key "profiles", "users"
+  add_foreign_key "rental_images", "list_sells"
   add_foreign_key "rental_listing_amenity_infos", "rental_lists"
   add_foreign_key "rental_listing_bedrooms", "rental_lists"
   add_foreign_key "rental_listing_common_spaces", "rental_lists"
   add_foreign_key "rental_listing_images", "rental_lists"
   add_foreign_key "rental_listing_space_usages", "rental_lists"
   add_foreign_key "rental_lists", "users"
+  add_foreign_key "room_details", "list_sells"
+  add_foreign_key "sell_building_details", "list_sells"
+  add_foreign_key "sell_visit_times", "list_sells"
 end

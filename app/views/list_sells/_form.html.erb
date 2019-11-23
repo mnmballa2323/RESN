@@ -1,0 +1,137 @@
+<%= form_with(model: list_sell, local: true) do |form| %>
+  <% if list_sell.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(list_sell.errors.count, "error") %> prohibited this list_sell from being saved:</h2>
+
+      <ul>
+      <% list_sell.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unit %>
+    <%= form.text_field :unit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :virtual_tour_link %>
+    <%= form.text_field :virtual_tour_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :home_type %>
+    <%= form.text_field :home_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_bed %>
+    <%= form.text_field :no_bed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_f_bath %>
+    <%= form.text_field :no_f_bath %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_q_bath %>
+    <%= form.text_field :no_q_bath %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_h_bath %>
+    <%= form.text_field :no_h_bath %>
+  </div>
+
+  <div class="field">
+    <%= form.label :finished_sq %>
+    <%= form.text_field :finished_sq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lot_size %>
+    <%= form.text_field :lot_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_built %>
+    <%= form.text_field :year_built %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remodel_year %>
+    <%= form.text_field :remodel_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hoa_dues %>
+    <%= form.text_field :hoa_dues %>
+  </div>
+
+  <div class="field">
+    <%= form.label :basement_area %>
+    <%= form.text_field :basement_area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :garage_area %>
+    <%= form.text_field :garage_area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website %>
+    <%= form.text_field :website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :my_views %>
+    <%= form.text_field :my_views %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ph_no %>
+    <%= form.text_field :ph_no %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

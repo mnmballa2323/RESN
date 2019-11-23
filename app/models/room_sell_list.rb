@@ -1,0 +1,2 @@
+class RoomSellList < ApplicationRecord
+end

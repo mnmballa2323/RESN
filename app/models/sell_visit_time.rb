@@ -1,0 +1,2 @@
+class SellVisitTime < ApplicationRecord
+end

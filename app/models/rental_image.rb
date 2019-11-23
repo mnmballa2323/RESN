@@ -1,0 +1,2 @@
+class RentalImage < ApplicationRecord
+end
