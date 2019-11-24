@@ -25,8 +25,22 @@
 </div>
 </section>
 
+<section style="margin: 20px">
+<br/>
+  <h2 style="margin-left: 15px; padding-bottom: 30px; font-size: 24px; text-align: center”;">Rental Lists
+  </h2>
+  <hr/>
+  <% @list_sells.all.each do |list| %>
+    <%= render 'list_sells/list_sell_card', f: list %>  
+  <% end %>
+</section>
+
+<hr/>
+
+
 <script>
- function clickButton (){
-  window.location.href = '/buy/search';
+function clickButton (){
+  const value = document.getElementById("search_buy").value;
+  window.location.href = '/buy?search=' + value;
  }
 </script>

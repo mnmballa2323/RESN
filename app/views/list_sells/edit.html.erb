@@ -1,6 +1,16 @@
-<h1>Editing List Sell</h1>
 
-<%= render 'form', list_sell: @list_sell %>
-
-<%= link_to 'Show', @list_sell %> |
-<%= link_to 'Back', list_sells_path %>
+<section class="my-property">
+<div class="container">
+  <ul class="ht-breadcrumbs ht-breadcrumbs--y-padding ht-breadcrumbs--b-border">
+    <li class="ht-breadcrumbs__item"><a href="#" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Home</span></a></li>
+    <li class="ht-breadcrumbs__item"><a href="#" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Pages</span></a></li>
+    <li class="ht-breadcrumbs__item"><span class="ht-breadcrumbs__page">My Profile</span></li>
+  </ul>
+  <div class="my-profile__container">
+    <div class="row">
+      <%= render 'listing_sell' %>
+      <%= render 'form', list_sell: @list_sell %>            
+    </div>
+  </div>
+</div>
+</section>  

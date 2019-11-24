@@ -1,73 +1,42 @@
-<p id="notice"><%= notice %></p>
 
-<h1>List Sells</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Address</th>
-      <th>Unit</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th>Price</th>
-      <th>Virtual tour link</th>
-      <th>Home type</th>
-      <th>No bed</th>
-      <th>No f bath</th>
-      <th>No q bath</th>
-      <th>No h bath</th>
-      <th>Finished sq</th>
-      <th>Lot size</th>
-      <th>Year built</th>
-      <th>Remodel year</th>
-      <th>Hoa dues</th>
-      <th>Basement area</th>
-      <th>Garage area</th>
-      <th>Description</th>
-      <th>Website</th>
-      <th>My views</th>
-      <th>Email</th>
-      <th>Ph no</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @list_sells.each do |list_sell| %>
-      <tr>
-        <td><%= list_sell.address %></td>
-        <td><%= list_sell.unit %></td>
-        <td><%= list_sell.city %></td>
-        <td><%= list_sell.state %></td>
-        <td><%= list_sell.zip %></td>
-        <td><%= list_sell.price %></td>
-        <td><%= list_sell.virtual_tour_link %></td>
-        <td><%= list_sell.home_type %></td>
-        <td><%= list_sell.no_bed %></td>
-        <td><%= list_sell.no_f_bath %></td>
-        <td><%= list_sell.no_q_bath %></td>
-        <td><%= list_sell.no_h_bath %></td>
-        <td><%= list_sell.finished_sq %></td>
-        <td><%= list_sell.lot_size %></td>
-        <td><%= list_sell.year_built %></td>
-        <td><%= list_sell.remodel_year %></td>
-        <td><%= list_sell.hoa_dues %></td>
-        <td><%= list_sell.basement_area %></td>
-        <td><%= list_sell.garage_area %></td>
-        <td><%= list_sell.description %></td>
-        <td><%= list_sell.website %></td>
-        <td><%= list_sell.my_views %></td>
-        <td><%= list_sell.email %></td>
-        <td><%= list_sell.ph_no %></td>
-        <td><%= link_to 'Show', list_sell %></td>
-        <td><%= link_to 'Edit', edit_list_sell_path(list_sell) %></td>
-        <td><%= link_to 'Destroy', list_sell, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New List Sell', new_list_sell_path %>
+<section class="my-property">
+<div class="container">
+  <ul class="ht-breadcrumbs ht-breadcrumbs--y-padding ht-breadcrumbs--b-border">
+    <li class="ht-breadcrumbs__item"><a href="#" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Home</span></a></li>
+    <li class="ht-breadcrumbs__item"><a href="#" class="ht-breadcrumbs__link"><span class="ht-breadcrumbs__title">Pages</span></a></li>
+    <li class="ht-breadcrumbs__item"><span class="ht-breadcrumbs__page">My Profile</span></li>
+  </ul>
+  <div class="my-profile__container">
+    <div class="row">
+    <%= render 'listing_sell' %>
+      <div class="col-md-9">
+        <ul class="manage-list manage-list--my-property">
+          <li class="manage-list__header">
+            <span class="manage-list__title"><i class="fa fa-bookmark-o" aria-hidden="true"></i> My List</span>
+            <span class="manage-list__title"><i class="fa fa-calendar-o" aria-hidden="true"></i> Creation Date</span>
+          </li>
+          <% @list_sells.each do |list_sell| %>
+            <li class="manage-list__item">
+            <div class="manage-list__item-container">
+              <div class="manage-list__item-img">
+                  <%= image_tag 'uploads/manage-item-1.jpg', alt: 'Weston Hightpointe Place', class: 'listing__img'%>
+              </div><!-- manage-list__item-img -->
+        
+              <div class="manage-list__item-detail">
+                <h3 class="listing__title"><a href="#"><%= list_sell.my_views %></a></h3>
+              </div>
+            </div><!-- .manage-list__item-container -->
+            <div class="manage-list__expire-date"><%= list_sell.created_at.to_date %></div>
+            
+            <div class="manage-list__action">
+              <td><%= link_to '<span class="edit"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>'.html_safe, edit_list_sell_path(list_sell) %></td>
+              <%= link_to '<span class="remove"><i class="fa fa-times" aria-hidden="true"></i>Remove</span>'.html_safe, list_sell, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </li><!-- .manage-list__item" -->
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>  

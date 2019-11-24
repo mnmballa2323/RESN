@@ -4,7 +4,7 @@ class ListSellsController < ApplicationController
   # GET /list_sells
   # GET /list_sells.json
   def index
-    @list_sells = ListSell.all
+    @list_sells = current_user.list_sells.all
   end
 
   # GET /list_sells/1
@@ -14,7 +14,7 @@ class ListSellsController < ApplicationController
 
   # GET /list_sells/new
   def new
-    @list_sell = ListSell.new
+    @list_sell = current_user.list_sells.new
   end
 
   # GET /list_sells/1/edit
@@ -24,11 +24,11 @@ class ListSellsController < ApplicationController
   # POST /list_sells
   # POST /list_sells.json
   def create
-    @list_sell = ListSell.new(list_sell_params)
+    @list_sell = current_user.list_sells.new(list_sell_params)
 
     respond_to do |format|
       if @list_sell.save
-        format.html { redirect_to @list_sell, notice: 'List sell was successfully created.' }
+        format.html { redirect_to list_sells_url, notice: 'List sell was successfully created.' }
         format.json { render :show, status: :created, location: @list_sell }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ListSellsController < ApplicationController
   def update
     respond_to do |format|
       if @list_sell.update(list_sell_params)
-        format.html { redirect_to @list_sell, notice: 'List sell was successfully updated.' }
+        format.html { redirect_to list_sells_url, notice: 'List sell was successfully updated.' }
         format.json { render :show, status: :ok, location: @list_sell }
       else
         format.html { render :edit }
@@ -69,6 +69,6 @@ class ListSellsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_sell_params
-      params.require(:list_sell).permit(:address, :unit, :city, :state, :zip, :price, :virtual_tour_link, :home_type, :no_bed, :no_f_bath, :no_q_bath, :no_h_bath, :finished_sq, :lot_size, :year_built, :remodel_year, :hoa_dues, :basement_area, :garage_area, :description, :website, :my_views, :email, :ph_no)
+      params.require(:list_sell).permit(:address, :unit, :city, :state, :zip, :price, :virtual_tour_link, :home_type, :no_bed, :no_f_bath, :no_q_bath, :no_h_bath, :finished_sq, :lot_size, :year_built, :remodel_year, :hoa_dues, :basement_area, :garage_area, :description, :website, :my_views, :email, :ph_no, room_details_attributes: [:id, :dish_washer, :rang_oven, :dryer, :refrigerator, :freezer, :trash_compactor, :garbage_disposal, :washer, :microwave, :basement_type, :floor_type, :room_type, :_destroy], sell_visit_times_attributes: [:id, :date, :start_time, :end_time, :_destroy], rental_images_attributes:[:id, :url, :_destroy] )
     end
 end
