@@ -69,7 +69,12 @@ class PagesController < ApplicationController
   end
 
   def buy
-    
+    if !params[:search].present?
+      @list_sells =  ListSell.all
+    else
+      variable = params[:search]
+      @list_sells =  ListSell.where("my_views like ?", "%#{variable}%")
+    end
   end
 
   def sell
