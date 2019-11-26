@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:index, :new, :edit]
+  before_action :set_user, only: [:index, :new, :edit, :switch_role]
   before_action :authenticate_user!
 
   # GET /services
@@ -74,6 +74,20 @@ class ServicesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to user_services_path(current_user), notice: 'Service was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def switch_role
+    if @user.has_role?(:seller)
+      @user.remove_role(:seller)
+      @user.add_role(:buyer)
+      redirect_to '/services'
+      puts "switched the role to Buyer"
+    else
+      @user.remove_role(:buyer)
+      @user.add_role(:seller)
+      redirect_to user_services_path(current_user)
+      puts "switched the role to Seller"
     end
   end
 

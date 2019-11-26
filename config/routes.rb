@@ -51,6 +51,7 @@ Rails.application.routes.draw do
   get "/inbox" => "profiles#messages"
   get "art" => "pages#art"
   get "furniture" => "pages#furniture"
+  post "switch_role" => "services#switch_role"
 
   get "/privacy-policy" => "pages#privacy_policy"
   get "/term_of_use" => "pages#term_of_use"

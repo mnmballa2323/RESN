@@ -1,4 +1,5 @@
 class Service < ApplicationRecord
+	resourcify
 	has_many_attached :images, dependent: :destroy
 	has_many :requirements, dependent: :destroy
 	has_many :faqs, dependent: :destroy

@@ -50,6 +50,10 @@
     <li>
     <%= link_to "Logout", destroy_user_session_path, method: :delete  %>    
     </li>
+
+    <li>
+    <%= link_to "Switch To #{current_user.has_role?(:seller) ? "Buyer" : "Seller"}", switch_role_path, method: :post  %>    
+    </li>
     </ul>
     </div>
     </div>
