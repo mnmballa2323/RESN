@@ -42,6 +42,21 @@ a {
     text-decoration: none !important;
 }
 
+.submit-btn{
+    background-image: url(search_icon_dark.png);
+    width: 40px;
+    position: absolute;
+    top: 0px;
+    border: none;
+    height: 55px;
+    width: 65px;
+    right: 0px;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    
+}
 .footer-links .container {
     border-top: 1px solid silver;
     padding-top: 25px;
