@@ -9,7 +9,7 @@
 
   </div>
   <%= form_with(url: "services", method: "get", remote: false) do |form| %>
-    <div class="banner-input" style="margin-top">
+    <div class="banner-input" style="margin-left: 25%;">
       <div class="listing-sort listing-sort--main-listing" style="width: 50%;float: left; border-radius: 6px; border: 2px solid white; background: transparent; padding: 0px;">
         <input type="submit" value="" class="main-listing__form-field agent-submit" style="width: 10% ;float:right">   
         <%= form.text_field "title", id: "search_agent", class: "main-listing__form-field ", placeholder: "Search by Name or Location...", style: "width: 75% ;float:right; background: transparent; color: white!;" %>  

@@ -251,6 +251,8 @@ header {
 }
 
 .service_banner {
+    margin-top: -4rem;
+
     background-image: url("service_banner.png");
     background-size: 100% 100%;
     background-position: top center;
@@ -284,6 +286,7 @@ header {
 }
 
 .mortgage_banner {
+    margin-top: -1.5rem;
     background-image: url("mortgage_banner.png");
     background-size: 100% 100%;
     background-position: top center;
