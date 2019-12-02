@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:index, :new, :edit, :switch_role]
+  before_action :set_user, only: [:index, :new, :edit, :switch_role, :mark_as_favorite]
   before_action :authenticate_user!
 
   # GET /services
@@ -88,6 +88,15 @@ class ServicesController < ApplicationController
       @user.add_role(:seller)
       redirect_to user_services_path(current_user)
       puts "switched the role to Seller"
+    end
+  end
+
+  def mark_as_favorite
+    @services = Service.take(4)
+    if @user.favorites.find_by(service_id: params[:id]).nil?
+      @user.favorites.create(service_id: params[:id])
+    else
+      @user.favorites.find_by(service_id: params[:id]).delete
     end
   end
 

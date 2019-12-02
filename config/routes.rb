@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   resources :properties
   devise_for :users
   resources :user do
-    resources :services
+    resources :services do
+      member do
+        post "mark_as_favorite"
+      end
+    end
   end
   root 'home#index'
   resources :chats, only: [:index, :show, :create]
