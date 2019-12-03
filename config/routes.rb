@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :list_arts
   resources :list_sells
   resources :rental_lists
   mount ActionCable.server => '/cable'

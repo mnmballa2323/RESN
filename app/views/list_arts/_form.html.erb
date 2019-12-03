@@ -1,0 +1,47 @@
+<%= form_with(model: list_art, local: true) do |form| %>
+  <% if list_art.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(list_art.errors.count, "error") %> prohibited this list_art from being saved:</h2>
+
+      <ul>
+      <% list_art.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :art_name %>
+    <%= form.text_field :art_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

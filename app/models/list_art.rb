@@ -1,0 +1,2 @@
+class ListArt < ApplicationRecord
+end

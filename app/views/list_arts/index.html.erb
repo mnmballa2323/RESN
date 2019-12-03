@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>List Arts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Art name</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Size</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @list_arts.each do |list_art| %>
+      <tr>
+        <td><%= list_art.art_name %></td>
+        <td><%= list_art.type %></td>
+        <td><%= list_art.price %></td>
+        <td><%= list_art.description %></td>
+        <td><%= list_art.size %></td>
+        <td><%= list_art.url %></td>
+        <td><%= link_to 'Show', list_art %></td>
+        <td><%= link_to 'Edit', edit_list_art_path(list_art) %></td>
+        <td><%= link_to 'Destroy', list_art, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New List Art', new_list_art_path %>
