@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_152719) do
+ActiveRecord::Schema.define(version: 2019_12_04_181752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,33 @@ ActiveRecord::Schema.define(version: 2019_11_26_152719) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["profile_id"], name: "index_friend_lists_on_profile_id"
+  end
+
+  create_table "list_arts", force: :cascade do |t|
+    t.string "art_name"
+    t.string "type"
+    t.string "price"
+    t.string "description"
+    t.string "size"
+    t.string "url"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_list_arts_on_user_id"
+  end
+
+  create_table "list_furnitures", force: :cascade do |t|
+    t.string "title"
+    t.string "price"
+    t.string "url"
+    t.string "type"
+    t.string "size"
+    t.string "material"
+    t.string "total_no"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_list_furnitures_on_user_id"
   end
 
   create_table "list_sells", force: :cascade do |t|
@@ -412,6 +439,8 @@ ActiveRecord::Schema.define(version: 2019_11_26_152719) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "list_arts", "users"
+  add_foreign_key "list_furnitures", "users"
   add_foreign_key "list_sells", "users"
   add_foreign_key "other_details", "list_sells"
   add_foreign_key "profiles", "users"

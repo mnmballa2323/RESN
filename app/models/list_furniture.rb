@@ -1,0 +1,2 @@
+class ListFurniture < ApplicationRecord
+end

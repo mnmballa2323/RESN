@@ -7,6 +7,7 @@ class CreateListArts < ActiveRecord::Migration[5.2]
       t.string :description
       t.string :size
       t.string :url
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
