@@ -1,10 +1,11 @@
 class ListArtsController < ApplicationController
   before_action :set_list_art, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /list_arts
   # GET /list_arts.json
   def index
-    @list_arts = ListArt.all
+    @list_arts = current_user.list_arts.all
   end
 
   # GET /list_arts/1
@@ -14,7 +15,7 @@ class ListArtsController < ApplicationController
 
   # GET /list_arts/new
   def new
-    @list_art = ListArt.new
+    @list_art = current_user.list_arts.new
   end
 
   # GET /list_arts/1/edit
@@ -24,7 +25,7 @@ class ListArtsController < ApplicationController
   # POST /list_arts
   # POST /list_arts.json
   def create
-    @list_art = ListArt.new(list_art_params)
+    @list_art = current_user.list_arts.new(list_art_params)
 
     respond_to do |format|
       if @list_art.save
@@ -69,6 +70,6 @@ class ListArtsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_art_params
-      params.require(:list_art).permit(:art_name, :type, :price, :description, :size, :url)
+      params.require(:list_art).permit(:art_name, :art_type, :price, :description, :size, :url)
     end
 end

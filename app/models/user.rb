@@ -22,4 +22,5 @@ class User < ApplicationRecord
 
   has_many :rental_lists
   has_many :list_sells
+  has_many :list_arts
 end
