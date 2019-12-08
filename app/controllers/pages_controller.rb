@@ -134,6 +134,12 @@ class PagesController < ApplicationController
   end
 
   def art 
+    if !params[:search].present?
+      @list_arts =  ListArt.all
+    else
+      variable = params[:search]
+      @list_arts =  ListArt.where("art_name like ?", "%#{variable}%")
+    end
   end
   
   def furniture

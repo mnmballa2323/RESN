@@ -29,7 +29,7 @@ class ListArtsController < ApplicationController
 
     respond_to do |format|
       if @list_art.save
-        format.html { redirect_to @list_art, notice: 'List art was successfully created.' }
+        format.html { redirect_to list_arts_url, notice: 'List art was successfully created.' }
         format.json { render :show, status: :created, location: @list_art }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class ListArtsController < ApplicationController
   def update
     respond_to do |format|
       if @list_art.update(list_art_params)
-        format.html { redirect_to @list_art, notice: 'List art was successfully updated.' }
+        format.html { redirect_to list_arts_url, notice: 'List art was successfully updated.' }
         format.json { render :show, status: :ok, location: @list_art }
       else
         format.html { render :edit }
