@@ -15,3 +15,25 @@
 </section>
 
 
+<!-- Banner Section Ends Here -->
+<section class="homes">
+  <div class="container">
+    <div class="homes-data">
+      <div class="row">
+       
+      <% @list_furnitures.all.each do |furniture| %>
+        <%= render 'list_furnitures/furniture_card', f: furniture %>  
+      <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+<hr/>
+
+
+<script>
+function clickButton (){
+const value = document.getElementById("search_buy").value;
+window.location.href = '/furniture?search=' + value;
+}
+</script>

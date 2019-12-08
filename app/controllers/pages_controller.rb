@@ -143,6 +143,12 @@ class PagesController < ApplicationController
   end
   
   def furniture
+    if !params[:search].present?
+      @list_furnitures =  ListFurniture.all
+    else
+      variable = params[:search]
+      @list_furnitures =  ListFurniture.where("title like ?", "%#{variable}%")
+    end
   end
   def privacy_policy
   end
