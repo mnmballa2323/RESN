@@ -50,6 +50,7 @@ Rails.application.routes.draw do
   get 'list_new' => 'pages#list_new'
   get '/buy/search' => 'pages#buy_search'
   get '/rent/search' => 'pages#rent_search'
+  get '/services/search' => 'pages#services_search'
   get '/find-friend' => 'profiles#find_friends'
   get '/friend_list' => 'profiles#friend_list'
   post "profiles/add_friend" => "profiles#add_friend"

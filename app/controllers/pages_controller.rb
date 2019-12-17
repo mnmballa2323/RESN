@@ -41,17 +41,21 @@ class PagesController < ApplicationController
   end
 
   def services
+    @services = Service.take(4)
+  end
+
+  def services_search
     if !params[:category].present? and !params[:title].present?
       @services = Service.take(4)
     else
       if params[:category] != "Find Service" and params[:title].present?
-        @services = Service.where(category: params[:category], title: params[:title]).take(4)
+        @services = Service.where(category: params[:category], title: params[:title]).paginate(page: params[:page], per_page: 8)
       elsif params[:category] == "Find Service" and params[:title].present?
-        @services = Service.where(title: params[:title]).take(4)
+        @services = Service.where(title: params[:title]).paginate(page: params[:page], per_page: 8)
       elsif params[:category] != "Find Service" and !params[:title].present?
-        @services = Service.where(category: params[:category]).take(4)
+        @services = Service.where(category: params[:category]).paginate(page: params[:page], per_page: 8)
       else
-        @services = Service.take(4)
+        "No results"
       end
     end
   end
