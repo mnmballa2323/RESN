@@ -16,4 +16,4 @@
 # 		s.packages.create(name: "Basic", description: "aaaa", delivery_time: 2, revisions: 2, price: 5 )
 # 	end
 # end
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin@resn.com', password: '12345resn', password_confirmation: '12345resn')
