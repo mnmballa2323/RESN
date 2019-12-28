@@ -67,11 +67,12 @@
           </li>
           <% else %>
           <li class="header__nav-item" style="margin: 0px 2px;">
-            <%= link_to "Sign in", new_user_session_path, class: 'header__nav-link header__nav-link--v2' %>
-
-          </li> <li class="header__nav-item" style="margin: 0px 2px;">
             <%= link_to "Sign up", new_user_registration_path, class: 'header__nav-link header__nav-link--v2'   %>
           </li>
+          <li class="header__nav-item" style="margin: 0px 2px;">
+            <%= link_to "Sign in", new_user_session_path, class: 'header__nav-link header__nav-link--v2' %>
+
+          </li> 
           <% end %>
          
         </ul><!-- .header__nav -->
