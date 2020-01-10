@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :properties
   devise_for :users
   resources :user do
-    resources :services do
+    resources :services, except: :show do
       member do
         post "mark_as_favorite"
       end
@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   end
   root 'home#index'
   resources :chats, only: [:index, :show, :create]
+  get 'service/:id' => 'services#show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

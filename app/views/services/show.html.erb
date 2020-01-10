@@ -1,5 +1,364 @@
-<!-- <p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<title>Service Information</title>
+	<%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'application' %>
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+	<div class="page-wrapper">
+		<div class="service-page">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<!-- Profile Overview -->
+						<div class="service-overview">
+							<h1><%=@service.description%></h1>
+							<div class="seller-overview">
+								<div class="user-profile-avatar">
+									<span>
+										<%= image_tag 'profile-img.png' %>
+										<!-- <img src="assets/images/profile-img.png" alt=""> -->
+									</span>
+									<div class="user-name">
+										<a href="#" title=""><%= @service.user.profile.first.first_name %></a>
+										<div class="seller-level">
+											<a href="#" title="">Level 1 Seller</a>
+										</div>
+									</div>
+								</div>
+								<div class="user-rating-info">
+									<ul>
+										<li><a href="#"><i class="fa fa-star"></i></a></li>
+										<li><a href="#"><i class="fa fa-star"></i></a></li>
+										<li><a href="#"><i class="fa fa-star"></i></a></li>
+										<li><a href="#"><i class="fa fa-star"></i></a></li>
+										<li><a href="#"><i class="fa fa-star"></i></a></li>
+										<li><span>4.9</span></li>
+									</ul>
+									<span>(24)</span>
+								</div>
+							</div>
+						</div>
+						<div class="service-gallery">
+							<div class="slider-container">
+								<div class="main-service-slider owl-carousel" data-slider-id="1">
+								    <div>
+								    	<a href="assets/images/slider-img.jpg" data-fancybox="gallery">
+								    		<%= image_tag 'MobileApps.png' %>
+								    		<!-- <img src="assets/images/slider-img.jpg" alt=""> -->
+								    		<a class="full-screen" href="assets/images/slider-img.jpg" data-fancybox="gallery"><i class="fas fa-expand-arrows-alt"></i>full screen</a>
+								    	</a>
+								    </div>
+								    <div>
+								    	<a href="assets/images/slider-img.jpg" data-fancybox="gallery">
+								    		<!-- <img src="assets/images/slider-img.jpg" alt=""> -->
+								    		<%= image_tag 'MobileApps.png' %>
+								    		<a class="full-screen" href="assets/images/slider-img.jpg" data-fancybox="gallery"><i class="fas fa-expand-arrows-alt"></i>full screen</a>
+								    	</a>
+								    </div>
+								   	<div>
+								    	<a href="assets/images/slider-img.jpg" data-fancybox="gallery">
+								    		<%= image_tag 'MobileApps.png' %>
+								    		<a class="full-screen" href="assets/images/slider-img.jpg" data-fancybox="gallery"><i class="fas fa-expand-arrows-alt"></i>full screen</a>
+								    	</a>
+								    </div>
+								</div>
+							</div>
+						</div>
 
-<%= link_to 'Edit', edit_service_path(@service) %> |
-<%= link_to 'Back', services_path %>
- -->
+						<!-- Service Description -->
+						<div class="service-description">
+							<h2 class="section-title">About This Gig</h2>
+							<div class="description-wrapper">
+								<div class="description-content">
+									Hello dear customer,
+									<br/>
+									<br/>
+									Are you looking for professional landing page in HTML CSS Bootstrap?  
+									<br/>
+									You are in right place, feel free to contact us with any requirment.
+									<br/>
+									<br/>
+									My Service:
+									<br/>
+									<br/>
+									<ul>
+										<li>Unique and Quality work</li>
+										<li>HTML, CSS , Bootstrap</li>
+										<li>Completely Tested Delivery</li>
+										<li>High Converting Landing Page.</li>
+										<li>Revisions</li>
+										<li>100% Customer Satisfaction.s</li>
+										<li>Great support</li>
+									</ul>
+									<br/>
+									Our points:
+									<br/>
+									<br/>
+									<ul>
+										<li>100% Quality work</li>
+										<li>Commitment on Time</li>
+										<li>Friendly Communication</li>
+										<li>Client Satisfaction</li>
+									</ul>
+									<br/>
+								
+									Please Contact me before placing an order
+								</div>
+							</div>
+							<div class="service-meta">
+								<ul>
+									<li>
+										<span>Programming Language</span>
+										<ul>
+											<li>HTML & CSS</li>
+										</ul>
+									</li>
+									<li>
+										<span>Expertise</span>
+										<ul>
+											<li>Cross Browser Compatibility,  </li>
+											<li>PSD to HTML,  </li>
+											<li>W3C Validation </li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Service Reviews -->
+						<div class="service-reviews">
+							<div class="service-review-packages">
+								<div class="service-review-title">
+									<div class="rating-text">
+										<span>
+											27 Reviews
+										</span>
+										<ul>
+											<li><i class="fa fa-star"></i></li>
+											<li><i class="fa fa-star"></i></li>
+											<li><i class="fa fa-star"></i></li>
+											<li><i class="fa fa-star"></i></li>
+											<li><i class="fa fa-star"></i></li>
+											<li><span>4.9</span></li>
+										</ul>
+									</div>
+									<div class="rating-filter">
+										<h5>Sort By</h5>
+										<div class="select-filter">
+											<select>
+												<option value="">Most Relevant</option>
+												<option value="">Most Recent</option>
+											</select>
+										</div>	
+									</div>
+								</div>
+								<div class="service-total-rating">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="service-star-bars">
+												<ul class="star-counters">
+													<li class="star-active">
+														<span class="star-num">5 Stars</span>
+														 <div class="progress">
+														  	<div class="progress-bar" role="progressbar" aria-valuenow="70"
+														  		aria-valuemin="0" aria-valuemax="100" style="width:70%">
+														  	</div>
+														</div>
+														<span class="star-total-num">(26)</span>
+													</li>
+													<li>
+														<span class="star-num">4 Stars</span>
+														 <div class="progress">
+														  	<div class="progress-bar" role="progressbar" aria-valuenow="0"
+														  		aria-valuemin="0" aria-valuemax="0" style="width:0">
+														  	</div>
+														</div>
+														<span class="star-total-num">(26)</span>
+													</li>
+													<li>
+														<span class="star-num">3 Stars</span>
+														 <div class="progress">
+														  	<div class="progress-bar" role="progressbar" aria-valuenow="0"
+														  		aria-valuemin="0" aria-valuemax="0" style="width:0">
+														  	</div>
+														</div>
+														<span class="star-total-num">(26)</span>
+													</li>
+													<li>
+														<span class="star-num">2 Stars</span>
+														 <div class="progress">
+														  	<div class="progress-bar" role="progressbar" aria-valuenow="0"
+														  		aria-valuemin="0" aria-valuemax="0" style="width:0">
+														  	</div>
+														</div>
+														<span class="star-total-num">(26)</span>
+													</li>
+													<li class="star-active">
+														<span class="star-num">3 Stars</span>
+														 <div class="progress">
+														  	<div class="progress-bar" role="progressbar" aria-valuenow="70"
+														  		aria-valuemin="0" aria-valuemax="100" style="width:70%">
+														  	</div>
+														</div>
+														<span class="star-total-num">(26)</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="serice-ranking">
+												<h4>Rating Breakdown</h4>
+												<ul>
+													<li>
+														<span>Seller communication level</span>
+														<span class="ranking-value pull-right">4.9<i class="fa fa-star"></i></span>
+													</li>
+													<li>
+														<span>Recommend to a friend</span>
+														<span class="ranking-value pull-right">4.9<i class="fa fa-star"></i></span>
+													</li>
+													<li>
+														<span>Service as described</span>
+														<span class="ranking-value pull-right">4.9<i class="fa fa-star"></i></span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="service-review-list">
+								<ul class="review-list">
+									<li>
+										<span class="avatar"><%= image_tag 'profile-img.png' %></span>
+										<div class="review-detail">
+											<h5>biggayal<span><i class="fa fa-star"></i>5</span></h5>
+											<span class="review-country"><img src="assets/images/profile-img.png" alt="">United Kindom</span>
+											<p>Professional, friendly, and quick!</p>
+											<span class="duration">1 week ago</span>
+										</div>
+										<div class="seller-response">
+											<span class="avatar"><img src="assets/images/profile-img.png" alt=""></span>
+											<div class="review-detail">
+												<h5>biggayal</h5>
+												<p>Professional, friendly, and quick!</p>
+												<span class="duration">1 week ago</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<span class="avatar"><%= image_tag 'profile-img.png' %></span>
+										<div class="review-detail">
+											<h5>biggayal<span><i class="fa fa-star"></i>5</span></h5>
+											<span class="review-country"><img src="assets/images/profile-img.png" alt="">United Kindom</span>
+											<p>Professional, friendly, and quick!</p>
+											<span class="duration">1 week ago</span>
+										</div>
+										<div class="seller-response">
+											<span class="avatar"><img src="assets/images/profile-img.png" alt=""></span>
+											<div class="review-detail">
+												<h5>biggayal</h5>
+												<p>Professional, friendly, and quick!</p>
+												<span class="duration">1 week ago</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Packages -->
+					<div class="col-md-5">
+						<div class="sidebar">
+							<aside>
+							<div class="packages-tabs">
+								<ul class="nav nav-tabs">
+									<li><a data-toggle="tab" href="#pre">Premium</a></li>
+									<li><a data-toggle="tab" href="#stan">Standard</a></li>
+									<li class="active"><a data-toggle="tab" href="#basic">Basic</a></li>
+								</ul>
+								<div class="tab-content">
+									<div id="pre" class="tab-pane fade in active">
+									    <div class="package-content">
+									    	<div class="package-title">
+									    		<h3>Basic</h3>
+									    		<span>$10</span>
+									    	</div>
+									    	<p>Landing page with 1 section and Responsive design with w3c validation</p>
+									    	<div class="package-options">
+									    		<span><i class="far fa-clock"></i>2 Days Delivery</span>
+									    		<span><i class="fas fa-sync-alt"></i>1 Revision</span>
+									    	</div>
+									    	<ul class="packages-task">
+									    		<li><i class="fas fa-check"></i>Social Media Icons</li>
+									    		<li><i class="fas fa-check"></i>1 Section Included</li>
+									    		<li><i class="fas fa-check"></i>Responsive Design</li>
+									    	</ul>
+									    	<a class="btn" href="#">Continue ($10)</a>
+									    	<a class="compare-btn" href="#">Compare Packages</a>
+									    </div>
+									</div>
+									<div id="stan" class="tab-pane fade">
+									   <div class="package-content">
+									    	<div class="package-title">
+									    		<h3>Basic</h3>
+									    		<span>$10</span>
+									    	</div>
+									    	<p>Landing page with 1 section and Responsive design with w3c validation</p>
+									    	<div class="package-options">
+									    		<span><i class="far fa-clock"></i>2 Days Delivery</span>
+									    		<span><i class="fas fa-sync-alt"></i>1 Revision</span>
+									    	</div>
+									    	<ul class="packages-task">
+									    		<li><i class="fas fa-check"></i>Social Media Icons</li>
+									    		<li><i class="fas fa-check"></i>1 Section Included</li>
+									    		<li><i class="fas fa-check"></i>Responsive Design</li>
+									    	</ul>
+									    	<a class="btn" href="#">Continue ($10)</a>
+									    	<a class="compare-btn" href="#">Compare Packages</a>
+									    </div>
+									</div>
+									<div id="basic" class="tab-pane fade">
+									    <div class="package-content">
+									    	<div class="package-title">
+									    		<h3>Basic</h3>
+									    		<span>$10</span>
+									    	</div>
+									    	<p>Landing page with 1 section and Responsive design with w3c validation</p>
+									    	<div class="package-options">
+									    		<span><i class="far fa-clock"></i>2 Days Delivery</span>
+									    		<span><i class="fas fa-sync-alt"></i>1 Revision</span>
+									    	</div>
+									    	<ul class="packages-task">
+									    		<li><i class="fas fa-check"></i>Social Media Icons</li>
+									    		<li><i class="fas fa-check"></i>1 Section Included</li>
+									    		<li><i class="fas fa-check"></i>Responsive Design</li>
+									    	</ul>
+									    	<a class="btn" href="#">Continue ($10)</a>
+									    	<a class="compare-btn" href="#">Compare Packages</a>
+									    </div>
+									</div>
+								</div>
+							</div>
+							<div class="custom-order">
+								<h5>Do you have any special requirements?</h5>
+								<a class="custom-order-btn" href="#">Get a Quote</a>
+							</div>
+						</aside>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
