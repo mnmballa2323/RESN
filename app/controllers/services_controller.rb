@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-  before_action :set_service, only: [:show, :edit, :update, :destroy]
+  before_action :set_service, only: [:edit, :update, :destroy]
   before_action :set_user, only: [:index, :new, :edit, :switch_role, :mark_as_favorite]
   before_action :authenticate_user!
 
@@ -13,6 +13,7 @@ class ServicesController < ApplicationController
   # GET /services/1
   # GET /services/1.json
   def show
+    @service = Service.find(params[:id])
   end
 
   # GET /services/new
