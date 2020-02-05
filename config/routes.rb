@@ -63,6 +63,7 @@ Rails.application.routes.draw do
   get "art" => "pages#art"
   get "furniture" => "pages#furniture"
   post "switch_role" => "services#switch_role"
+  post "review" => "services#review"
 
   get "/privacy-policy" => "pages#privacy_policy"
   get "/term_of_use" => "pages#term_of_use"
