@@ -21,7 +21,7 @@
       <div class="user-detail-footer">
         <div class="heart-icon">
           <%= link_to mark_as_favorite_user_service_path(f.user, f), method: :post, remote: true do %>
-            <i class="fas fa-heart" style="<%= f.favorites.find_by(user_id: current_user.id).nil? ? "color: #c6c6c6" : "color: black"%>"></i>
+            <i class="fas fa-heart" style="<%= f.favorites.find_by(user_id: current_user&.id).nil? ? "color: #c6c6c6" : "color: black"%>"></i>
           <% end %>
           <i class="fas fa-bars" style="color: #c6c6c6"></i>
         </div>

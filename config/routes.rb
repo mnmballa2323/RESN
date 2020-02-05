@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   get 'insurance' => 'pages#insurance' 
   get 'mobileApps' => 'pages#mobile_apps' 
   get 'hotels' => 'pages#hotels' 
+  get 'shop' => 'pages#shop' 
   get 'partners' => 'pages#partners' 
   get 'investors' => 'pages#investors' 
   get 'team' => 'pages#team' 
