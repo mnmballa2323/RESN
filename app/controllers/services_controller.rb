@@ -101,6 +101,12 @@ class ServicesController < ApplicationController
     end
   end
 
+  def review
+    service = Service.find(params[:service_id])
+    service.reviews.create(stars: params[:rating].to_i, message: params[:message])
+    redirect_to services_url
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_service

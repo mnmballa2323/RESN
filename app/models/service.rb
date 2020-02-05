@@ -8,6 +8,7 @@ class Service < ApplicationRecord
 	belongs_to :user
 	has_many :favorites, dependent: :destroy
   has_many :users_favorites, through: :favorites, source: :user
+  has_many :reviews
 
 	accepts_nested_attributes_for :packages, reject_if: proc { |attributes| attributes['name'].blank? }
 	accepts_nested_attributes_for :faqs, reject_if: proc { |attributes| attributes['question'].blank? }

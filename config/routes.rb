@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   get 'insurance' => 'pages#insurance' 
   get 'mobileApps' => 'pages#mobile_apps' 
   get 'hotels' => 'pages#hotels' 
+  get 'shop' => 'pages#shop' 
   get 'partners' => 'pages#partners' 
   get 'investors' => 'pages#investors' 
   get 'team' => 'pages#team' 
@@ -63,6 +64,7 @@ Rails.application.routes.draw do
   get "art" => "pages#art"
   get "furniture" => "pages#furniture"
   post "switch_role" => "services#switch_role"
+  post "review" => "services#review"
 
   get "/privacy-policy" => "pages#privacy_policy"
   get "/term_of_use" => "pages#term_of_use"

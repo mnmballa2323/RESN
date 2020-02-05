@@ -133,6 +133,9 @@ class PagesController < ApplicationController
     
   end
 
+  def shop
+  end
+
   def list_new
     @user = current_user
   end
