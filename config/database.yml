@@ -1,4 +1,5 @@
 development:
   adapter: postgresql
-  database: real_estate_dev
-  
+  database: real_estate
+  username: postgres
+  password: postgres  

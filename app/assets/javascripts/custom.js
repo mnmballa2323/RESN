@@ -519,7 +519,6 @@ $(".account").attr('id', '');
   if ($(".map-container--sticky").length > 0) {
     Stickyfill.add($(".map-container--sticky")[0]);
   }
-});
 
 function adjustMenu() {
   if (ww < 992) {
