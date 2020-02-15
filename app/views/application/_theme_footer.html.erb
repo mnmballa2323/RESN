@@ -7,7 +7,7 @@
         <!-- <div class="row"> -->
 
         <div class="col-md-2 text-center">
-          <a href="/"><img src="<%=image_path("RESNlogo1.png")%>" alt="" class="img-responsvie" style="height: 200px; width: 200px;"></a>
+          <a href="/"><img src="<%=image_path("RESNlogo.png")%>" alt="" class="img-responsvie" style="height: 130px; width: 200px;"></a>
             <div class="col-sm-12 col-md-12 footer__links-single">
               <div class="row social_row">
                 <%= image_tag "icon_facebook.png", class: "social_icon" %>
@@ -21,7 +21,7 @@
 
         <div class="footer-col col-md-2 col-sm-6 footer-col-first text-center" style="margin-top: 2%;">
           <h3 class="footer-col-title"></h3>
-          <hr style="border: 1px solid black;">
+          <hr style="border: 1px solid black; width: 100px; margin-left: 40px;">
           <ul class="footer-col-menu">
 
 
@@ -30,20 +30,20 @@
             <li><a href="/team">Team</a></li>
             <li><a href="/partners">Partners</a></li>
             <li><a href="/contact">Contact</a></li>
-            <!-- <li><a href="/mobileApps">Apps</a></li> -->
+            <!-- <li><a href="/margin-bottomileApps">Apps</a></li> -->
 
           </ul>
         </div>
 
          <div class="footer-col col-md-2 col-sm-6 footer-col-first text-center" style="margin-top: 2%;">
           <h3 class="footer-col-title"></h3>
-          <hr style="border: 1px solid black;">
+          <hr style="border: 1px solid black; width: 100px; margin-left: 40px;">
           <ul class="footer-col-menu">
 
 
-            <li><a href="#">Buy</a></li>
-            <li><a href="#">Rent</a></li>
-            <li><a href="#">Sell</a></li>
+            <li><a href="<%=buy_path%>">Buy</a></li>
+            <li><a href="<%=rent_path%>">Rent</a></li>
+            <li><a href="<%=sell_path%>">Sell</a></li>
            
 
           </ul>
@@ -52,12 +52,12 @@
 
          <div class="footer-col col-md-2 col-sm-6 footer-col-first text-center" style="margin-top: 2%;">
           <h3 class="footer-col-title"></h3>
-          <hr style="border: 1px solid black;">
+          <hr style="border: 1px solid black; width: 100px; margin-left: 40px;">
           <ul class="footer-col-menu">
 
-            <li><a href="#">Realtors</a></li>
-            <li><a href="#">Mortage</a></li>
-            <li><a href="#">Insurance</a></li>
+            <li><a href="<%=realtors_path%>">Realtors</a></li>
+            <li><a href="<%=mortgage_path%>">Mortage</a></li>
+            <li><a href="<%=insurance_path%>">Insurance</a></li>
            
 
            
@@ -67,7 +67,7 @@
 
         <div class="footer-col col-md-2 col-sm-6 footer-col-second text-center" style="margin-top: 2%;">
           <h3 class="footer-col-title"></h3>
-          <hr style="border: 1px solid black;">
+          <hr style="border: 1px solid black; width: 100px; margin-left: 40px;">
           <ul class="footer-col-menu">
 
             <li><a href="#">Services</a></li>
@@ -79,7 +79,7 @@
 
         <div class="footer-col col-md-2 col-sm-6 footer-col-second text-center" style="margin-top: 2%;">
           <h3 class="footer-col-title"></h3>
-          <hr style="border: 1px solid black;">
+          <hr style="border: 1px solid black; width: 100px; margin-left: 40px;">
           <ul class="footer-col-menu">
 
             <li><a href="<%=privacy_policy_path%>">Privacy Policy</a></li>
@@ -125,7 +125,7 @@
   <div class="copyright-footer" style="margin-bottom: 2%">
     <!-- <p style="margin-bottom: -15px;"> -->
       <!-- <a href="<%#=new_user_registration_path%>" style="margin-right: 10px;">SignUp </a> - <a href="<%#=new_user_session_path%>" style="margin-left: 10px;"> SignIn</a></p> -->
-    <p style="margin-left: 1%; margin-bottom: -15px;">Copyright © 2020 <a href="#">RESN, INC</a><%#= image_tag 'ruby_ring.png' %></p>
+    <p style="margin-left: 4%; margin-bottom: -15px; font-size: 8px; margin-top: -10px;">Copyright © 2020 <a href="#">RESN, INC</a><%#= image_tag 'ruby_ring.png' %></p>
     <!-- <p style="text-align: center; margin-bottom: -15px;"><a href="<%=privacy_policy_path%>">Privacy Policy</a> - <a href="<%=term_of_use_path%>">Terms of Use</a></p>
     <p style="text-align: center;"><a href="/cookies-policy">Cookies Policy</a></p> -->
   </div>
